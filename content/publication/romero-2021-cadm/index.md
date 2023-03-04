@@ -44,8 +44,17 @@ abstract: Memory mapping enhances decision tree implementations by enabling cons
   memory-mapped forests can speed up inference latency by a factor of up to 30 × .
 publication: '*International Workshop on Parallel and Distributed Algorithms for Decision
   Sciences*'
-doi: 10.1145/3458744.3474052
 links:
-- name: URL
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: 10.1145/3458744.3474052
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
   url: https://doi.org/10.1145/3458744.3474052
+- name: Talk
+  icon_pack: fab
+  icon: youtube
+  url: https://www.youtube.com/watch?v=njFgPfFqikI&t=2s
 ---

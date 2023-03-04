@@ -51,8 +51,17 @@ abstract: We argue that memory content-tracking across the nodes of a parallel m
   of lines of code within ConCORD, while performing well.
 publication: '*Proceedings of the 23rd International Symposium on High-Performance
   Parallel and Distributed Computing*'
-doi: 10.1145/2600212.2600214
 links:
-- name: URL
+- name: DOI
+  icon_pack: ai
+  icon: doi
   url: https://doi.org/10.1145/2600212.2600214
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
+  url: https://dl.acm.org/doi/10.1145/2600212.2600214
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: http://pdinda.org/Papers/hpdc14.pdf
 ---

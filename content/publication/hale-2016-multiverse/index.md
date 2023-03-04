@@ -56,8 +56,13 @@ abstract: The hybrid runtime (HRT) model offers a plausible path towards high pe
   Multiverse, and illustrate its capabilities using the Racket runtime system.
 publication: '*Proceedings of the 25th ACM International Symposium on High-Performance
   Parallel and Distributed Computing*'
-doi: 10.1145/2907294.2907309
 links:
-- name: URL
+- name: DOI
+  icon_pack: ai
+  icon: doi
   url: https://doi.org/10.1145/2907294.2907309
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
+  url: https://dl.acm.org/doi/10.1145/2907294.2907309
 ---

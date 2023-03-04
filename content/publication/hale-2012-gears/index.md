@@ -48,8 +48,18 @@ abstract: We argue that the implementation of VMM-based virtual services for a g
   the benefits of allowing virtual service implementations to span across the VMM,
   guest, and application. Other VMMs could employ the ideas and tools in GEARS.
 publication: '*Proceedings of the 9th International Conference on Autonomic Computing*'
-doi: 10.1145/2371536.2371542
 links:
-- name: URL
+- name: DOI
+  icon_pack: ai
+  icon: doi
   url: https://doi.org/10.1145/2371536.2371542
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
+  url: https://dl.acm.org/doi/10.1145/2371536.2371542
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: http://pdinda.org/Papers/icac12.pdf
+
 ---

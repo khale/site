@@ -1,0 +1,17 @@
+@inproceedings{SWIECH:2014:VMMHTM,
+ abstract = {We describe the design, implementation, and evaluation of emulated hardware transactional memory, specifically the Intel Haswell Restricted Transactional Memory (RTM) architectural extensions for x86/64, within a virtual machine monitor (VMM). Our system allows users to investigate RTM on hardware that does not provide it, debug their RTM-based transactional software, and stress test it on diverse emulated hardware configurations, including potential future configurations that might support arbitrary length transactions. Initial performance results suggest that we are able to accomplish this approximately 60 times faster than under a full emulator. A noteworthy aspect of our system is a novel page-flipping technique that allows us to completely avoid instruction emulation, and to limit instruction decoding to only that necessary to determine instruction length. This makes it possible to implement RTM emulation, and potentially other techniques, far more compactly than would otherwise be possible. We have implemented our system in the context of the Palacios VMM. Our techniques are not specific to Palacios, and could be implemented in other VMMs.},
+ address = {New York, NY, USA},
+ articleno = {4},
+ author = {Swiech, Maciej and Hale, Kyle C. and Dinda, Peter A.},
+ booktitle = {Proceedings of the 4th International Workshop on Runtime and Operating Systems for Supercomputers},
+ doi = {10.1145/2612262.2612265},
+ isbn = {9781450329507},
+ location = {Munich, Germany},
+ month = {June},
+ numpages = {8},
+ publisher = {Association for Computing Machinery},
+ series = {ROSS '14},
+ title = {VMM emulation of Intel hardware transactional memory},
+ url = {https://doi.org/10.1145/2612262.2612265}
+}
+

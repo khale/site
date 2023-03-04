@@ -45,8 +45,17 @@ abstract: Software prefetching and hardware-based cache allocation techniques (C
   cache partition allocations dynamically.
 publication: '*Proceedings of the 17th International Workshop on Data Management on
   New Hardware (DaMoN 2021)*'
-doi: 10.1145/3465998.3466016
 links:
-- name: URL
+- name: DOI
+  icon_pack: ai
+  icon: doi
   url: https://doi.org/10.1145/3465998.3466016
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
+  url: https://dl.acm.org/doi/10.1145/3465998.3466016
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: http://cs.iit.edu/~dbgroup/assets/pdfpubls/ZH21.pdf
 ---

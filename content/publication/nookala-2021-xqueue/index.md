@@ -55,5 +55,17 @@ abstract: Enabling efficient fine-grained task parallelism is a significant chal
   and LLVM OpenMP in many cases, with speedups as high as 116× in some cases.
 publication: '*Proceedings of the 28th IEEE International Symposium on the Modeling,
   Analysis, and Simulation of Computer and Telecommunication Systems*'
-doi: 10.1109/MASCOTS53633.2021.9614292
+links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: 10.1109/MASCOTS53633.2021.9614292
+- name: IEEE
+  icon_pack: ai
+  icon: ieee
+  url: https://ieeexplore.ieee.org/document/9614292
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: http://pdinda.org/Papers/mascots21.pdf
 ---

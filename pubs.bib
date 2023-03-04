@@ -57,7 +57,7 @@ abstract = {When a virtual machine monitor (VMM) provides code that executes in 
  month = {June},
  pdf = {http://users.eecs.northwestern.edu/~kch479/docs/nautilus.pdf},
  title = {A Case for Transforming Parallel Runtimes Into Operating System Kernels},
- year = {2015}
+ year = {2015},
  isbn = {9781450335508},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
@@ -180,7 +180,7 @@ Systems for Supercomputers},
  abstract = {Address translation fundamentally embodies a translation function that maps from virtual to physical addresses. In current systems, the translation function is encoded by the kernel in an in-memory radix tree structure (the page table hierarchy) which is then interpreted by the hardware (the pagewalker, pagewalk-caches, and TLBs). We consider implementing the translation function itself as reconfigurable hardware-does this make any sense? To study this question, we collected numerous in-situ Linux page tables for a wide range of workloads, including those from HPC, to serve as example translation functions. We then prototyped several potential mechanisms to implement the translation function, including inverted page tables with function-specific perfect hashing, translation functions directly implemented using Espresso-minimized PLAs, translation functions genetically-evolved in a language suitable for FPGA-like synthesis, and translation functions based on recovered/manufactured region (segment/mmap) lookup using multiplexor trees. Each mechanism was then evaluated using the Linux page tables, primarily for space and lookup speed. We report our findings and try to address the question.},
  month = {October},
  title = {Prospects for Functional Address Translation},
- year = {2019}
+ year = {2019},
  location = {Rennes, France},
  series = {MASCOTS '19},
 }
@@ -192,7 +192,7 @@ Systems for Supercomputers},
  pdf = {https://www.hale-legacy.com/docs/diver-ross19.pdf},
  abstract = {Specialized operating systems have enjoyed a recent revival driven both by a pressing need to rethink the system software stack in several domains and by the convenience and flexibility that on-demand infrastructure and virtual execution environments offer. Several barriers exist which curtail the widespread adoption of such highly specialized systems, but perhaps the most consequential of them is that these systems are simply difficult to use. In this paper we discuss the challenges faced by specialized OSes, both for HPC and more broadly, and argue that what is needed to make them practically useful is a reasonable development and deployment model that will form the foundation for a kernel ecosystem that allows intrepid developers to discover, experiment with, contribute to, and write programs for available kernel frameworks while safely ignoring complexities such as provisioning, deployment, cross-compilation, and interface compatibility. We argue that such an ecosystem would allow more developers of highly tuned applications to reap the performance benefits of specialized kernels.},
  title = {Towards a Practical Ecosystem of Specialized OS Kernels},
- year = {2019}
+ year = {2019},
  publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
  series = {ROSS '19},
@@ -290,7 +290,7 @@ In this paper, we propose a practical approach to heartbeat scheduling that invo
 
 @inproceedings{SWIECH:2014:VMMHTM,
  author = {Swiech, Maciej and Hale, Kyle C. and Dinda, Peter A.},
- title = {VMM emulation of Intel hardware transactional memory}
+ title = {VMM emulation of Intel hardware transactional memory},
  month = {June},
  isbn = {9781450329507},
 publisher = {Association for Computing Machinery},
@@ -366,6 +366,42 @@ numpages = {12},
 keywords = {content sharing, hpc, memory deduplication, virtualization},
 location = {Vancouver, BC, Canada},
 series = {HPDC '14}
+}
+
+@inproceedings{MA:2021:OPENMP,
+    author = {Ma, Jiacheng and Wang, Wenyi and Nelson, Aaron and Cuevas, Michael and Homerding, Brian and Liu, Conghao and Huang, Zhen and Campanoni, Simone and Hale, Kyle and Dinda, Peter},
+    title = {Paths to OpenMP in the Kernel},
+    year = {2021},
+    isbn = {9781450384421},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3458817.3476183},
+    doi = {10.1145/3458817.3476183},
+    abstract = {OpenMP implementations make increasing demands on the kernel. We take the next step and consider bringing OpenMP into the kernel. Our vision is that the entire OpenMP application, run-time system, and a kernel framework is interwoven to become the kernel, allowing the OpenMP implementation to take full advantage of the hardware in a custom manner. We compare and contrast three approaches to achieving this goal. The first, runtime in kernel (RTK), ports the OpenMP runtime to the kernel, allowing any kernel code to use OpenMP pragmas. The second, process in kernel (PIK) adds a specialized process abstraction for running user-level OpenMP code within the kernel. The third, custom compilation for kernel (CCK), compiles OpenMP into a form that leverages the kernel framework without any intermediaries. We describe the design and implementation of these approaches, and evaluate them using NAS and other benchmarks.},
+    booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+    articleno = {65},
+    numpages = {17},
+    keywords = {OpenMP, parallelism, operating systems},
+    location = {St. Louis, Missouri},
+    series = {SC '21}
+}
+
+@inproceedings{RAINEY:2021:TPAL,
+author = {Rainey, Mike and Newton, Ryan R. and Hale, Kyle and Hardavellas, Nikos and Campanoni, Simone and Dinda, Peter and Acar, Umut A.},
+title = {Task Parallel Assembly Language for Uncompromising Parallelism},
+year = {2021},
+isbn = {9781450383912},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3453483.3460969},
+doi = {10.1145/3453483.3460969},
+abstract = {Achieving parallel performance and scalability involves making compromises between parallel and sequential computation. If not contained, the overheads of parallelism can easily outweigh its benefits, sometimes by orders of magnitude. Today, we expect programmers to implement this compromise by optimizing their code manually. This process is labor intensive, requires deep expertise, and reduces code quality. Recent work on heartbeat scheduling shows a promising approach that manifests the potentially vast amounts of available, latent parallelism, at a regular rate, based on even beats in time. The idea is to amortize the overheads of parallelism over the useful work performed between the beats. Heartbeat scheduling is promising in theory, but the reality is complicated: it has no known practical implementation. In this paper, we propose a practical approach to heartbeat scheduling that involves equipping the assembly language with a small set of primitives. These primitives leverage existing kernel and hardware support for interrupts to allow parallelism to remain latent, until a heartbeat, when it can be manifested with low cost. Our Task Parallel Assembly Language (TPAL) is a compact, RISC-like assembly language. We specify TPAL through an abstract machine and implement the abstract machine as compiler transformations for C/C++ code and a specialized run-time system. We present an evaluation on both the Linux and the Nautilus kernels, considering a range of heartbeat interrupt mechanisms. The evaluation shows that TPAL can dramatically reduce the overheads of parallelism without compromising scalability.},
+booktitle = {Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
+pages = {1064–1079},
+numpages = {16},
+keywords = {parallel programming languages, granularity control},
+location = {Virtual, Canada},
+series = {PLDI '21}
 }
 
 @inproceedings{ZENG:2021:CAT,

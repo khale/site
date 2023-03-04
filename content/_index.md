@@ -43,7 +43,7 @@ sections:
     id: pubs
     content:
       title: Recent Papers
-      count: 8
+      count: 10
       filters:
         folders:
           - publication

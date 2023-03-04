@@ -35,4 +35,10 @@ publication_types:
 - '4'
 abstract: ''
 publication: ''
+
+links:
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: https://www.mccormick.northwestern.edu/computer-science/documents/tech-reports/2015/details-of-the-case-for-transforming-parallel-runtime-systems-into-operating-system-kernels.pdf
 ---

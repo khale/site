@@ -55,8 +55,13 @@ abstract: In our hybrid runtime (HRT) model, a parallel runtime system and the a
   of a function call.
 publication: '*Proceedings of The12th ACM SIGPLAN/SIGOPS International Conference
   on Virtual Execution Environments*'
-doi: 10.1145/2892242.2892255
 links:
-- name: URL
+- name: DOI
+  icon_pack: ai
+  icon: doi
   url: https://doi.org/10.1145/2892242.2892255
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
+  url: https://dl.acm.org/doi/abs/10.1145/3007611.2892255
 ---

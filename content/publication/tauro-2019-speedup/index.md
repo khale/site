@@ -52,5 +52,17 @@ abstract: For workloads that place strenuous demands on system software, novel o
   relevant for multi-OS environments.
 publication: '*Proceedings of the 27th IEEE International Symposium on the Modeling,
   Analysis, and Simulation of Computer and Telecommunication Systems*'
-doi: 10.1109/MASCOTS.2019.00044
+links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://dx.doi.org/10.1109/MASCOTS.2019.00044
+- name: IEEE
+  icon_pack: ai
+  icon: ieee
+  url: https://ieeexplore.ieee.org/abstract/document/8843282
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: https://www.hale-legacy.com/docs/multios-mascots19.pdf
 ---

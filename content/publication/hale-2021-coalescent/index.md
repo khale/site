@@ -43,5 +43,17 @@ abstract: As computational infrastructure extends to the edge, it will increasin
   to enabling such tightly-coupled, disaggregated, and ephemeral infrastructure provisioning,
   advocate for more research in the area, and outline possible paths forward.
 publication: '*Proceedings of the 12th ACM SIGOPS Asia-Pacific Workshop on Systems*'
-doi: 10.1145/3476886.3477503
+links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://dx.doi.org/10.1145/3476886.3477503
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
+  url: https://dl.acm.org/doi/10.1145/3476886.3477503
+- name: arXiv
+  icon_pack: ai
+  icon: arxiv
+  url: https://arxiv.org/abs/2104.07122
 ---

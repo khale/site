@@ -47,5 +47,22 @@ abstract: The hybrid runtime (HRT) model offers a path towards high performance 
   We describe the design and implementation of Multiverse and illustrate its capabilities
   using the massive, widely-used Racket runtime system.
 publication: '*Proceedings of the IEEE International Conference on Autonomic Computing*'
-doi: 10.1109/ICAC.2017.24
+links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://dx.doi.org/10.1109/ICAC.2017.24
+- name: IEEE
+  icon_pack: ai
+  icon: ieee
+  url: https://ieeexplore.ieee.org/abstract/document/8005347
+- name: arXiv
+  icon_pack: ai
+  icon: arxiv
+  url: https://arxiv.org/abs/1901.06360
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: https://users.cs.northwestern.edu/~pdinda/Papers/icac17.pdf
+
 ---

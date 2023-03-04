@@ -52,6 +52,10 @@ abstract: For workloads that place strenuous demands on system software, novel o
   reliably predicts speedup with 96% average accuracy.
 publication: '*IEEE Transactions on Parallel and Distributed Systems*'
 links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://dx.doi.org/10.1109/TPDS.2021.3114984
 - name: IEEE
   icon_pack: ai
   icon: ieee

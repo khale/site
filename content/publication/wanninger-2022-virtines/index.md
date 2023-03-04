@@ -54,14 +54,22 @@ abstract: An important class of applications, including programs that leverage t
   and with acceptable slowdowns.
 publication: '*Proceedings of the Seventeenth European Conference on Computer Systems*'
 links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://doi.org/10.1145/3492321.3519553
 - name: ACM
   icon_pack: ai
   icon: acmdl
-  url: https://doi.org/10.1145/3492321.3519553
+  url: https://dl.acm.org/doi/abs/10.1145/3492321.3519553
 - name: arXiv
   icon_pack: ai
   icon: arxiv
   url: https://arxiv.org/abs/2104.11324
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: "/papers/virtines-eurosys22.pdf"
 - name: Code
   icon_pack: fab
   icon: github

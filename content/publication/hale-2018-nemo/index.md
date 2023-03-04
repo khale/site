@@ -52,5 +52,13 @@ abstract: Runtimes and applications that rely heavily on asynchronous event noti
   latency of the hardware cache coherence network.
 publication: '*Proceedings of the 26th IEEE International Symposium on Modeling, Analysis,
   and Simulation of Computer and Telecommunication Systems*'
-doi: 10.1109/MASCOTS.2018.00041
+links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://dx.doi.org/10.1109/MASCOTS.2018.00041
+- name: IEEE
+  icon_pack: ai
+  icon: ieee
+  url: https://ieeexplore.ieee.org/document/8526899
 ---

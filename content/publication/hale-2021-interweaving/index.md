@@ -46,4 +46,17 @@ abstract: The layered structure of the system software stacks we use today allow
   promising ongoing work.
 publication: '*Proceedings of the 10th International Workshop on Runtime and Operating
   Systems for Supercomputers*'
+links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://dx.doi.org/10.1109/SCWS55283.2021.00017
+- name: IEEE
+  icon_pack: ai
+  icon: ieee
+  url: https://ieeexplore.ieee.org/document/9721326
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: "/papers/interweaving-ross21.pdf"
 ---

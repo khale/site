@@ -48,5 +48,13 @@ abstract: Chip multiprocessors (CMPs) have emerged as a primary vehicle for over
   We show that both static and dynamic policies can greatly reduce static energy at
   low injection rates with only minimal increases in dynamic energy and latency.
 publication: '*Proceedings of the 2nd International Workshop on Network on Chip Architectures*'
-doi: 10.1145/1645213.1645227
+links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://dx.doi.org/10.1145/1645213.1645227
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
+  url: https://dl.acm.org/doi/10.1145/1645213.1645227
 ---

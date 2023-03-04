@@ -51,6 +51,10 @@ abstract: "Random forests use ensembles of decision trees to boost accuracy for 
   \ persist as the number of decision trees in an ensemble increases."
 publication: '*Proceedings of the 23rd ACM/IFIP International Middleware Conference*'
 links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: https://doi.org/10.1145/3528535.3531519
 - name: ACM
   icon_pack: ai
   icon: acmdl

@@ -36,5 +36,7 @@ abstract: ''
 publication: ''
 links:
 - name: arXiv
+  icon_pack: ai
+  icon: arxiv
   url: https://arxiv.org/abs/2109.14072
 ---

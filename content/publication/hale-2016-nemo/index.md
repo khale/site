@@ -34,4 +34,9 @@ publication_types:
 - '4'
 abstract: ''
 publication: ''
+links: 
+- name: Website
+  icon_pack: fas
+  icon: window-maximize
+  url: https://www.scholars.northwestern.edu/en/publications/pushing-software-events-to-the-hardware-limit
 ---

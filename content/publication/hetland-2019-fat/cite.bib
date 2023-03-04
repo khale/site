@@ -1,0 +1,11 @@
+@inproceedings{HETLAND:2019:FAT,
+ abstract = {Address translation fundamentally embodies a translation function that maps from virtual to physical addresses. In current systems, the translation function is encoded by the kernel in an in-memory radix tree structure (the page table hierarchy) which is then interpreted by the hardware (the pagewalker, pagewalk-caches, and TLBs). We consider implementing the translation function itself as reconfigurable hardware-does this make any sense? To study this question, we collected numerous in-situ Linux page tables for a wide range of workloads, including those from HPC, to serve as example translation functions. We then prototyped several potential mechanisms to implement the translation function, including inverted page tables with function-specific perfect hashing, translation functions directly implemented using Espresso-minimized PLAs, translation functions genetically-evolved in a language suitable for FPGA-like synthesis, and translation functions based on recovered/manufactured region (segment/mmap) lookup using multiplexor trees. Each mechanism was then evaluated using the Linux page tables, primarily for space and lookup speed. We report our findings and try to address the question.},
+ author = {Hetland, Conor and Tziantzioulis, Georgios and Suchy, Brian and Hale, Kyle and Hardavellas, Nikos and Dinda, Peter},
+ booktitle = {Proceedings of the 27th IEEE International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS 2019)},
+ location = {Rennes, France},
+ month = {October},
+ series = {MASCOTS '19},
+ title = {Prospects for Functional Address Translation},
+ year = {2019}
+}
+

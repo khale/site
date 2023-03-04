@@ -52,4 +52,9 @@ abstract: 'When a virtual machine monitor (VMM) provides code that executes in t
   virtual core shares the physical core. In both cases only the guarded module has
   these privileges.'
 publication: '*Proceedings of the 11th International Conference on Autonomic Computing*'
+links: 
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: https://www.usenix.org/system/files/conference/icac14/icac14-paper-hale.pdf
 ---
