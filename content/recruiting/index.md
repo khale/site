@@ -28,7 +28,7 @@ as OSes, compilers, VMMs, emulators, or the like.
 
 ## Why come to Illinois Tech and Chicago?
 [Illinois Tech (IIT)](https://iit.edu) is a rising star in the Chicago area, and both the
-university as a whole and the [CS department](https://cs.iit.edu) are undergoing a period of
+university as a whole and the [CS department](https://iit.edu/computer-science) are undergoing a period of
 significant growth, with talented new faculty coming aboard every year.
 Illinois Tech's CS department has particular strength in the HPC and
 distributed systems area.
