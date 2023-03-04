@@ -85,7 +85,7 @@ of computer systems research.  My research interests
 span several areas in systems including OS, computer architecture, embedded
 systems, system security, and virtualization. A current primary focus of our
 lab is the design of specialized system software stacks for parallel and
-emerging computing applications. You can see my publications [below](#publications).
+emerging computing applications. You can see my publications [below](#pubs).
 
 
 I received my PhD from [Northwestern University](https://northwestern.edu) in
