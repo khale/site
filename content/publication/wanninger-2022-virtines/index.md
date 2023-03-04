@@ -17,7 +17,7 @@ lastmod: 2023-03-03T14:54:07-06:00
 featured: false
 draft: false
 venue: EuroSys '22
-award: Best Artifact Award
+award: Giles Muller Best Artifact Award
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
