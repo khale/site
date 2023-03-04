@@ -1,0 +1,12 @@
+@inproceedings{HALE:2014:GUARDMODS,
+ abstract = {When a virtual machine monitor (VMM) provides code that executes in the context of a guest operating system, allowing that code to have privileged access to specific hardware and VMM resources can enable new mechanisms to enhance functionality, performance, and adaptability. We present a software technique, guarded execution of privileged code in the guest, that allows the VMM to provide this capability, as well as an implementation for Linux guests in the Palacios VMM. Our system, which combines compile-time, link-time, and runtime techniques, provides the module developer with the following guarantees: (1) A kernel module will remain unmodified and it will acquire privilege only when untrusted code invokes it through developer-chosen, valid entry points with a valid stack. (2) Any execution path leaving the module will trigger a revocation of privilege. (3) The module has access to private memory. The system also provides the administrator with a secure method to bind a specific module with particular privileges implemented by the VMM. This lays the basis for guaranteeing that only trusted code in the guest can utilize special privileges. We give two examples of guarded Linux kernel modules: a network interface driver with direct access to the physical NIC and an idle loop that uses instructions not usually permitted in a guest, but which can be adaptively selected when no other virtual core shares the physical core. In both cases only the guarded module has these privileges.},
+ author = {Kyle C. Hale and Peter A. Dinda},
+ booktitle = {Proceedings of the 11th International Conference on Autonomic Computing},
+ location = {Philadelphia, PA, USA},
+ month = {June},
+ publisher = {USENIX Association},
+ series = {ICAC '14},
+ title = {Guarded Modules: Adaptively Extending the VMM's Privilege Into the Guest},
+ year = {2014}
+}
+

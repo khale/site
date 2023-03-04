@@ -1,0 +1,19 @@
+@inproceedings{HALE:2016:HRTHVM,
+ abstract = {In our hybrid runtime (HRT) model, a parallel runtime system and the application are together transformed into a specialized OS kernel that operates entirely in kernel mode and can thus implement exactly its desired abstractions on top of fully privileged hardware access. We describe the design and implementation of two new tools that support the HRT model. The first, the Nautilus Aerokernel, is a kernel framework specifically designed to enable HRTs for x64 and Xeon Phi hardware. Aerokernel primitives are specialized for HRT creation and thus can operate much faster, up to two orders of magnitude faster, than related primitives in Linux. Aerokernel primitives also exhibit much lower variance in their performance, an important consideration for some forms of parallelism. We have realized several prototype HRTs, including one based on the Legion runtime, and we provide application macrobenchmark numbers for our Legion HRT. The second tool, the hybrid virtual machine (HVM), is an extension to the Palacios virtual machine monitor that allows a single virtual machine to simultaneously support a traditional OS and software stack alongside an HRT with specialized hardware access. The HRT can be booted in a time comparable to a Linux user process startup, and functions in the HRT, which operate over the user process's memory, can be invoked by the process with latencies not much higher than those of a function call.},
+ address = {New York, NY, USA},
+ author = {Hale, Kyle C. and Dinda, Peter A.},
+ booktitle = {Proceedings of The12th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments},
+ doi = {10.1145/2892242.2892255},
+ isbn = {9781450339476},
+ keywords = {parallelism, operating systems, runtime systems},
+ location = {Atlanta, Georgia, USA},
+ month = {July},
+ numpages = {15},
+ pages = {161–175},
+ publisher = {Association for Computing Machinery},
+ series = {VEE '16},
+ title = {Enabling Hybrid Parallel Runtimes Through Kernel and Virtualization Support},
+ url = {https://doi.org/10.1145/2892242.2892255},
+ year = {2016}
+}
+

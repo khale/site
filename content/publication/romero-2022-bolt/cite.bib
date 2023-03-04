@@ -1,0 +1,18 @@
+@inproceedings{ROMERO:2022:BOLT,
+ abstract = {Random forests use ensembles of decision trees to boost accuracy for machine learning tasks. However, large ensembles slow down inference on platforms that process each tree in an ensemble individually. We present Bolt, a platform that restructures whole random forests, not just individual trees, to speed up inference. Conceptually, Bolt maps every path in each tree to a lookup table which, if cache were large enough, would allow inference with just one memory access. When the size of the lookup table exceeds cache capacity, Bolt employs a novel combination of lossless compression, parameter selection, and bloom filters to shrink the table while preserving fast inference. We compared inference speed in Bolt to three state-of-the-art platforms: Python Scikit-Learn, Ranger, and Forest Packing. We evaluated these platforms using datasets with vision, natural language processing and categorical applications. We observed that on ensembles of shallow decision trees Bolt can run 2--14X faster than competing platforms and that Bolt's speedups persist as the number of decision trees in an ensemble increases.},
+ address = {New York, NY, USA},
+ author = {Romero, Eduardo and Stewart, Christopher and Li, Angela and Hale, Kyle and Morris, Nathaniel},
+ booktitle = {Proceedings of the 23rd ACM/IFIP International Middleware Conference},
+ doi = {10.1145/3528535.3531519},
+ isbn = {9781450393409},
+ location = {Quebec, QC, Canada},
+ month = {October},
+ numpages = {13},
+ pages = {94–106},
+ publisher = {Association for Computing Machinery},
+ series = {Middleware '22},
+ title = {Bolt: Fast Inference for Random Forests},
+ url = {https://doi.org/10.1145/3528535.3531519},
+ year = {2022}
+}
+

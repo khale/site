@@ -5,7 +5,7 @@
 #
 # Website name
 title: "Kyle C. Hale" 
-baseURL: "/"
+baseURL: "https://halek.co"
 
 ############################
 ## LANGUAGE

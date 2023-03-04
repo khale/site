@@ -1,0 +1,407 @@
+@inproceedings{HALE:2009:SEGGATE,
+ author = {Hale, Kyle C. and Grot, Boris and Keckler, Stephen W.},
+ booktitle = {Proceedings of the 2nd International Workshop on Network on Chip Architectures},
+ month = {December},
+ title = {Segment Gating for Static Energy Reduction in Networks-on-Chip},
+ year = {2009},
+ location = {New York, NY, USA},
+ abstract = {Chip multiprocessors (CMPs) have emerged as a primary vehicle for overcoming the limitations of uniprocessor scaling, with power constraints now representing a key factor of CMP design. Recent studies have shown that the on-chip interconnection network (NOC) can consume as much as 36% of overall chip power. To date, researchers have employed several techniques to reduce power consumption in the network, including the use of on/off links by means of power gating. However, many of these techniques target dynamic power, and those that consider static power focus exclusively on flit buffers. In this paper, we aim to reduce static power consumption through a comprehensive approach that targets buffers, switches, arbitration units, and links. We establish an optimal power-down scheme which we use as an upper bound to evaluate several static policies on synthetic traffic patterns. We also evaluate dynamic utilization-aware power-down policies using traces from the PARSEC benchmark suite. We show that both static and dynamic policies can greatly reduce static energy at low injection rates with only minimal increases in dynamic energy and latency.},
+ series = {NoCArc '09},
+ publisher = {IEEE},
+ doi = {10.1145/1645213.1645227}
+}
+
+@inproceedings{HALE:2012:GEARS,
+    author = {Hale, Kyle C. and Xia, Lei and Dinda, Peter A.},
+    booktitle = {Proceedings of the 9th International Conference on Autonomic Computing},
+    month = {September},
+    title = {Shifting GEARS to Enable Guest-context Virtual Services},
+    keywords = {code transformation, virtual machines, services},
+    location = {San Jose, California, USA},
+    pages = {23–32},
+    year = {2012},
+    isbn = {9781450315203},
+ publisher = {Association for Computing Machinery},
+ address = {New York, NY, USA},
+ url = {https://doi.org/10.1145/2371536.2371542},
+ doi = {10.1145/2371536.2371542},
+ abstract = {We argue that the implementation of VMM-based virtual services for a guest should extend into the guest itself, even without its cooperation. Placing service components directly into the guest OS or application can reduce implementation complexity and increase performance. In this paper we show that the set of tools in a VMM required to enable a broad range of such guest-context services is fairly small. Further, we outline and evaluate these tools and describe their design and implementation in the context of Guest Examination and Revision Services (GEARS), a new framework within the Palacios VMM. We then describe two example GEARS-based services---an MPI communication accelerator and an overlay networking accelerator---that illustrate the benefits of allowing virtual service implementations to span across the VMM, guest, and application. Other VMMs could employ the ideas and tools in GEARS.},
+ series = {ICAC '12},
+}
+
+@inproceedings{HALE:2014:GUARDMODS,
+ author = {Kyle C. Hale and Peter A. Dinda},
+ booktitle = {Proceedings of the 11th International Conference on Autonomic Computing},
+ month = {June},
+ title = {Guarded Modules: Adaptively Extending the VMM's Privilege Into the Guest},
+abstract = {When a virtual machine monitor (VMM) provides code that executes in the context of a guest operating system, allowing that code to have privileged access to specific hardware and VMM resources can enable new mechanisms to enhance functionality, performance, and adaptability. We present a software technique, guarded execution of privileged code in the guest, that allows the VMM to provide this capability, as well as an implementation for Linux guests in the Palacios VMM. Our system, which combines compile-time, link-time, and runtime techniques, provides the module developer with the following guarantees: (1) A kernel module will remain unmodified and it will acquire privilege only when untrusted code invokes it through developer-chosen, valid entry points with a valid stack. (2) Any execution path leaving the module will trigger a revocation of privilege. (3) The module has access to private memory. The system also provides the administrator with a secure method to bind a specific module with particular privileges implemented by the VMM. This lays the basis for guaranteeing that only trusted code in the guest can utilize special privileges. We give two examples of guarded Linux kernel modules: a network interface driver with direct access to the physical NIC and an idle loop that uses instructions not usually permitted in a guest, but which can be adaptively selected when no other virtual core shares the physical core. In both cases only the guarded module has these privileges.},
+ publisher = {USENIX Association},
+ location = {Philadelphia, PA, USA},
+ year = {2014},
+ series = {ICAC '14},
+}
+
+@techreport{HALE:2015:NAUTILUS-TR,
+ author = {Hale, Kyle C. and Dinda, Peter A.},
+ institution = {Department of Electrical Engineering and Computer Science, Northwestern University},
+ month = {April},
+ number = {NWU-EECS-15-01},
+ pdf = {http://www.eecs.northwestern.edu/images/docs/techreports/2014_TR/2015_1_nautilus.pdf},
+ title = {Details of the Case for Transforming Parallel Runtimes Into Operating System Kernels},
+ year = {2015}
+}
+
+@inproceedings{HALE:2015:NAUTILUS,
+ author = {Hale, Kyle C. and Dinda, Peter A.},
+ booktitle = {Proceedings of the 24th ACM Symposium on High-performance Parallel and Distributed Computing (HPDC 2015)},
+ month = {June},
+ pdf = {http://users.eecs.northwestern.edu/~kch479/docs/nautilus.pdf},
+ title = {A Case for Transforming Parallel Runtimes Into Operating System Kernels},
+ year = {2015}
+ isbn = {9781450335508},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/2749246.2749264},
+  doi = {10.1145/2749246.2749264},
+ abstract = {The needs of parallel runtime systems and the increasingly sophisticated languages and compilers they support do not line up with the services provided by general-purpose OSes. Furthermore, the semantics available to the runtime are lost at the system-call boundary in such OSes. Finally, because a runtime executes at user-level in such an environment, it cannot leverage hardware features that require kernel-mode privileges---a large portion of the functionality of the machine is lost to it. These limitations warp the design, implementation, functionality, and performance of parallel runtimes. We summarize the case for eliminating these compromises by transforming parallel runtimes into OS kernels. We also demonstrate that it is feasible to do so. Our evidence comes from Nautilus, a prototype kernel framework that we built to support such transformations. After describing Nautilus, we report on our experiences using it to transform three very different runtimes into kernels.},
+pages = {27–32},
+numpages = {6},
+keywords = {hrts, hybrid runtimes, nautilus, parallel runtimes},
+location = {Portland, Oregon, USA},
+series = {HPDC '15}
+}
+
+@inproceedings{HALE:2016:HRTHVM,
+    author = {Hale, Kyle C. and Dinda, Peter A.},
+    title = {Enabling Hybrid Parallel Runtimes Through Kernel and Virtualization Support},
+    year = {2016},
+    month = {July},
+    isbn = {9781450339476},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/2892242.2892255},
+    doi = {10.1145/2892242.2892255},
+    abstract = {In our hybrid runtime (HRT) model, a parallel runtime system and the application are together transformed into a specialized OS kernel that operates entirely in kernel mode and can thus implement exactly its desired abstractions on top of fully privileged hardware access. We describe the design and implementation of two new tools that support the HRT model. The first, the Nautilus Aerokernel, is a kernel framework specifically designed to enable HRTs for x64 and Xeon Phi hardware. Aerokernel primitives are specialized for HRT creation and thus can operate much faster, up to two orders of magnitude faster, than related primitives in Linux. Aerokernel primitives also exhibit much lower variance in their performance, an important consideration for some forms of parallelism. We have realized several prototype HRTs, including one based on the Legion runtime, and we provide application macrobenchmark numbers for our Legion HRT. The second tool, the hybrid virtual machine (HVM), is an extension to the Palacios virtual machine monitor that allows a single virtual machine to simultaneously support a traditional OS and software stack alongside an HRT with specialized hardware access. The HRT can be booted in a time comparable to a Linux user process startup, and functions in the HRT, which operate over the user process's memory, can be invoked by the process with latencies not much higher than those of a function call.},
+    booktitle = {Proceedings of The12th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments},
+    pages = {161–175},
+    numpages = {15},
+    keywords = {parallelism, operating systems, runtime systems},
+    location = {Atlanta, Georgia, USA},
+    series = {VEE '16}
+}
+
+@inproceedings{HALE:2016:MULTIVERSE,
+    author = {Hale, Kyle C. and Hetland, Conor and Dinda, Peter A.},
+    title = {Automatic Hybridization of Runtime Systems},
+    year = {2016},
+    month = {May},
+    isbn = {9781450343145},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/2907294.2907309},
+    doi = {10.1145/2907294.2907309},
+    abstract = {The hybrid runtime (HRT) model offers a plausible path towards high performance and efficiency. By integrating the OS kernel, parallel runtime, and application, an HRT allows the runtime developer to leverage the full privileged feature set of the hardware and specialize OS services to the runtime's needs. However, conforming to the HRT model currently requires a complete port of the runtime and application to the kernel level, for example to our Nautilus kernel framework, and this requires knowledge of kernel internals. In response, we developed Multiverse, a system that bridges the gap between a built-from-scratch HRT and a legacy runtime system. Multiverse allows existing, unmodified applications and runtimes to be brought into the HRT model without any porting effort whatsoever. Developers simply recompile their package with our compiler toolchain, and Multiverse automatically splits the execution of the application between the domains of a legacy OS and an HRT environment. To the user, the package appears to run as usual on Linux, but the bulk of it now runs as a kernel. The developer can then incrementally extend the runtime and application to take advantage of the HRT model. We describe the design and implementation of Multiverse, and illustrate its capabilities using the Racket runtime system.},
+    booktitle = {Proceedings of the 25th ACM International Symposium on High-Performance Parallel and Distributed Computing},
+    pages = {137–140},
+    numpages = {4},
+    keywords = {hybrid runtimes, automatic hybridization, runtime systems, operating systems, multiverse},
+    location = {Kyoto, Japan},
+    series = {HPDC '16}
+}
+
+@techreport{HALE:2016:NEMO,
+ author = {Hale, Kyle C. and Dinda, Peter A.},
+ institution = {Department of Electrical Engineering and Computer Science, Northwestern University},
+ month = {March},
+ number = {NU-EECS-16-02},
+ pdf = {http://www.mccormick.northwestern.edu/eecs/documents/tech-reports/2016/2016-2-pushing-software-events-to-the-hardware-limit.pdf},
+ title = {Pushing Software Events to the Hardware Limit},
+ year = {2016}
+}
+
+@inproceedings{HALE:2017:MVERSE,
+  author={Hale, Kyle C. and Hetland, Conor and Dinda, Peter},
+  booktitle={Proceedings of the IEEE International Conference on Autonomic Computing}, 
+  title={Multiverse: Easy Conversion of Runtime Systems into OS Kernels via Automatic Hybridization}, 
+  year={2017},
+  month = {July},
+  abstract={The hybrid runtime (HRT) model offers a path towards high performance and efficiency. By integrating the OS kernel, runtime, and application, an HRT allows the runtime developer to leverage the full feature set of the hardware and specialize OS services to the runtime's needs. However, conforming to the HRT model currently requires a port of the runtime to the kernel level, for example to the Nautilus kernel framework, and this requires knowledge of kernel internals. In response, we developed Multiverse, a system that bridges the gap between a built-from-scratch HRT and a legacy runtime system. Multiverse allows unmodified applications and runtimes to be brought into the HRT model without any porting effort whatsoever by splitting the execution of the application between the domains of a legacy OS and an HRT environment. We describe the design and implementation of Multiverse and illustrate its capabilities using the massive, widely-used Racket runtime system.},
+  pages={177-186},
+  publisher={IEEE},
+  location={Columbus, OH, USA},
+  doi={10.1109/ICAC.2017.24},
+  series = {ICAC '17},
+}
+
+@inproceedings{HALE:2018:NEMO,
+  author={Hale, Kyle C. and Dinda, Peter A.},
+  booktitle={Proceedings of the 26th IEEE International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems}, 
+  title={An Evaluation of Asynchronous Software Events on Modern Hardware}, 
+  year={2018},
+  month = {September},
+  abstract={Runtimes and applications that rely heavily on asynchronous event notifications suffer when such notifications must traverse several layers of processing in software. Many of these layers necessarily exist in order to support a general-purpose, portable kernel architecture, but they introduce considerable overheads for demanding, high-performance parallel runtimes and applications. Other overheads can arise from a mismatched event programming or system call interface. Whatever the case, the average latency and variance in latency of commonly used software mechanisms for event notifications is abysmal compared to the capabilities of the hardware, which can exhibit orders of magnitude lower latency. We leverage the flexibility and freedom of the previously proposed Hybrid Runtime (HRT) model to explore the construction of low-latency, asynchronous software events uninhibited by interfaces and execution models commonly imposed by general-purpose OSes. We propose several mechanisms in a system we call Nemo which employs kernel mode-only features to accelerate event notifications by up to 4,000 times and we provide a detailed evaluation of our implementation using extensive microbenchmarks. We carry out our evaluation both on a modern x64 server and the Intel Xeon Phi. Finally, we propose a small addition to existing interrupt controllers (APICs) that could push the limit of asynchronous events closer to the latency of the hardware cache coherence network.},
+  pages={355-368},
+  publisher = {IEEE},
+  doi={10.1109/MASCOTS.2018.00041},
+  location = {Milwaukee, WI, USA},
+  series = {MASCOTS '18},
+}
+
+@InProceedings{hale2021coalescent,
+      title={Coalescent Computing}, 
+      author={Kyle Hale},
+      year={2021},
+      month={August},
+      publisher = {Association for Computing Machinery},
+      doi = {10.1145/3476886.3477503},
+      booktitle = {Proceedings of the 12th ACM SIGOPS Asia-Pacific Workshop on Systems},
+      abstract={As computational infrastructure extends to the edge, it will increasingly offer the same fine-grained resource provisioning mechanisms used in large-scale cloud datacenters, and advances in low-latency, wireless networking technology will allow service providers to blur the distinction between local and remote resources for commodity computing. From the users' perspectives, their devices will no longer have fixed computational power, but rather will appear to have flexible computational capabilities that vary subject to the shared, disaggregated edge resources available in their physical proximity. System software will transparently leverage these ephemeral resources to provide a better end-user experience. We discuss key systems challenges to enabling such tightly-coupled, disaggregated, and ephemeral infrastructure provisioning, advocate for more research in the area, and outline possible paths forward.},
+      pages = {79-88},
+      numpages = {10},
+      location = {Hong Kong, China},
+      series = {APSys '21}
+}
+
+@inproceedings{hale2021interweaving,
+      title={The Case for an Interwoven Parallel Hardware/Software Stack},
+      author={Kyle C. Hale, Simone Campanoni, Nikos Hardavellas, Peter A. Dinda},
+      abstract = {The layered structure of the system software stacks we use today allows for separation of concerns and increases portability. However, the confluence of widely available virtualization and hardware partitioning technology, new OS techniques, rapidly changing hardware, and significant advances in compiler technology together present a ripe opportunity for restructuring the stack, particularly to support effective parallel execution. We argue that there are cases where layers, particularly the compiler, run-time, kernel, and hardware, should be interwoven, enabling new optimizations and abstractions. We present four examples where we have successfully applied this interweaving model of system design, and we outline several lines of promising ongoing work.},
+      year={2021},
+      month={November},
+      booktitle={Proceedings of the 10th International Workshop on Runtime and Operating
+Systems for Supercomputers},
+      series={ROSS '21},
+      location={St. Louis, MO, USA},
+}
+
+@inproceedings{HETLAND:2019:FAT,
+ author = {Hetland, Conor and Tziantzioulis, Georgios and Suchy, Brian and Hale, Kyle and Hardavellas, Nikos and Dinda, Peter},
+ booktitle = {Proceedings of the 27th IEEE International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS 2019)},
+ abstract = {Address translation fundamentally embodies a translation function that maps from virtual to physical addresses. In current systems, the translation function is encoded by the kernel in an in-memory radix tree structure (the page table hierarchy) which is then interpreted by the hardware (the pagewalker, pagewalk-caches, and TLBs). We consider implementing the translation function itself as reconfigurable hardware-does this make any sense? To study this question, we collected numerous in-situ Linux page tables for a wide range of workloads, including those from HPC, to serve as example translation functions. We then prototyped several potential mechanisms to implement the translation function, including inverted page tables with function-specific perfect hashing, translation functions directly implemented using Espresso-minimized PLAs, translation functions genetically-evolved in a language suitable for FPGA-like synthesis, and translation functions based on recovered/manufactured region (segment/mmap) lookup using multiplexor trees. Each mechanism was then evaluated using the Linux page tables, primarily for space and lookup speed. We report our findings and try to address the question.},
+ month = {October},
+ title = {Prospects for Functional Address Translation},
+ year = {2019}
+ location = {Rennes, France},
+ series = {MASCOTS '19},
+}
+
+@inproceedings{LIU:2019:DIVER,
+ author = {Liu, Conghao and Hale, Kyle C.},
+ booktitle = {Proceedings of the International Workshop on Runtime and Operating Systems for Supercomputers},
+ month = {June},
+ pdf = {https://www.hale-legacy.com/docs/diver-ross19.pdf},
+ abstract = {Specialized operating systems have enjoyed a recent revival driven both by a pressing need to rethink the system software stack in several domains and by the convenience and flexibility that on-demand infrastructure and virtual execution environments offer. Several barriers exist which curtail the widespread adoption of such highly specialized systems, but perhaps the most consequential of them is that these systems are simply difficult to use. In this paper we discuss the challenges faced by specialized OSes, both for HPC and more broadly, and argue that what is needed to make them practically useful is a reasonable development and deployment model that will form the foundation for a kernel ecosystem that allows intrepid developers to discover, experiment with, contribute to, and write programs for available kernel frameworks while safely ignoring complexities such as provisioning, deployment, cross-compilation, and interface compatibility. We argue that such an ecosystem would allow more developers of highly tuned applications to reap the performance benefits of specialized kernels.},
+ title = {Towards a Practical Ecosystem of Specialized OS Kernels},
+ year = {2019}
+ publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+ series = {ROSS '19},
+ location = {Phoenix, AZ, USA},
+ doi = {10.1145/3322789.3328742},
+}
+
+@inproceedings{MA:2021:OPENMP,
+  author = {Jiacheng Ma, Wenyi Wang, Aaron Nelson, Michael Cuevas, Brian Homerding, Conghao Liu, Zhen Huang, Simone Campanoni, Kyle C. Hale,
+      and Peter Dinda},
+  title = {Paths to {OpenMP} in the Kernel}
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage, and Analysis}, 
+  year = {2021},
+  month = nov,
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  location = {St. Louis, MO, USA},
+  series = {SC '21},
+  url = {https://doi.org/10.1145/3458817.3476183},
+  doi = {10.1145/3458817.3476183},
+  abstract = {OpenMP implementations make increasing demands on the kernel. We take the next step and consider bringing OpenMP into the kernel. Our vision is that the entire OpenMP application, run-time system, and a kernel framework is interwoven to become the kernel, allowing the OpenMP implementation to take full advantage of the hardware in a custom manner. We compare and contrast three approaches to achieving this goal. The first, runtime in kernel (RTK), ports the OpenMP runtime to the kernel, allowing any kernel code to use OpenMP pragmas. The second, process in kernel (PIK) adds a specialized process abstraction for running user-level OpenMP code within the kernel. The third, custom compilation for kernel (CCK), compiles OpenMP into a form that leverages the kernel framework without any intermediaries. We describe the design and implementation of these approaches, and evaluate them using NAS and other benchmarks.},
+  articleno = {65},
+  numpages = {17},
+}
+
+@inproceedings{NOOKALA:2021:XQUEUE,
+  author = {Poornima Nookala, Peter Dinda, Kyle C. Hale, Ioan Raicu, and Kyle Chard},
+  title = {Extremely Fine-grained Parallelism via Scalable Concurrent Queues on Modern Many-core Architectures},
+  booktitle = {Proceedings of the 28th IEEE International Symposium on the Modeling, Analysis, and Simulation of Computer and
+      Telecommunication Systems},
+  year = {2021},
+  month = {November},
+  publisher = {IEEE},
+  location = {Virtual conference},
+  series = {MASCOTS '21},
+  abstract = {Enabling efficient fine-grained task parallelism is a significant challenge for hardware platforms with increasingly many cores. Existing techniques do not scale to hundreds of threads due to the high cost of synchronization in concurrent data structures. To overcome these limitations we present XQueue, a novel lock-less concurrent queuing system with relaxed ordering semantics that is geared towards realizing scalability up to hundreds of concurrent threads. We demonstrate the scalability of XQueue using microbenchmarks and show that XQueue can deliver concurrent operations with latencies as low as 110 cycles at scales of up to 192 cores (up to 6900× improvement compared to traditional synchronization mechanisms) across our diverse hardware, including x86, ARM, and Power9. The reduced latency allows XQueue to provide orders of magnitude (3300×) better throughput that existing techniques. To evaluate the real-world benefits of XQueue, we integrated XQueue with LLVM OpenMP and evaluated five unmodified benchmarks from the Barcelona OpenMP Task Suite (BOTS) as well as a graph traversal benchmark from the GAP benchmark suite. We compared the XQueue-enabled LLVM OpenMP implementation with the native LLVM and GNU OpenMP versions. Using fine-grained task workloads, XQueue can deliver 4× to 6× speedup compared to native GNU OpenMP and LLVM OpenMP in many cases, with speedups as high as 116× in some cases.},
+  doi = {10.1109/MASCOTS53633.2021.9614292},
+}
+
+@inproceedings{RAINEY:2021:TPAL,
+    author = {Mike Rainey, Ryan R. Newton, Kyle C. Hale, Nikos Hardavellas, Simone Campanoni, Peter Dinda, Umut A. Acar},
+    title = {Task Parallel Assembly Language for Uncompromising Parallelism},
+    booktitle = {Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
+    month = {June},
+    year = {2021}
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3453483.3460969},
+    doi = {10.1145/3453483.3460969},
+    pages = {1064-1079},
+    numpages = {16},
+    location = {Virtual, Canada},
+    abstract = {Achieving parallel performance and scalability involves making compromises between parallel and sequential computation. If not contained, the overheads of parallelism can easily outweigh its benefits, sometimes by orders of magnitude. Today, we expect programmers to implement this compromise by optimizing their code manually. This process is labor intensive, requires deep expertise, and reduces code quality. Recent work on heartbeat scheduling shows a promising approach that manifests the potentially vast amounts of available, latent parallelism, at a regular rate, based on even beats in time. The idea is to amortize the overheads of parallelism over the useful work performed between the beats. Heartbeat scheduling is promising in theory, but the reality is complicated: it has no known practical implementation.
+
+In this paper, we propose a practical approach to heartbeat scheduling that involves equipping the assembly language with a small set of primitives. These primitives leverage existing kernel and hardware support for interrupts to allow parallelism to remain latent, until a heartbeat, when it can be manifested with low cost. Our Task Parallel Assembly Language (TPAL) is a compact, RISC-like assembly language. We specify TPAL through an abstract machine and implement the abstract machine as compiler transformations for C/C++ code and a specialized run-time system. We present an evaluation on both the Linux and the Nautilus kernels, considering a range of heartbeat interrupt mechanisms. The evaluation shows that TPAL can dramatically reduce the overheads of parallelism without compromising scalability.},
+    series = {PLDI '21}
+}
+
+
+@TechReport{RIZVI:2019:JULIA,
+    author = {Rizvi, Amal and Hale, Kyle C.},
+    title = {Evaluating Julia as a Vehicle for High-Performance
+        Parallel Runtime Construction},
+    institution = {Department of Computer Science, Illinois Institute of Technology},
+    year = {2019},
+    number = {IIT-CS-OS-19-01},
+    month = oct,
+    pdf = {https://www.hale-legacy.com/docs/julia-tr.pdf}<
+}
+
+@misc{rizvi2021julia,
+      title={A Look at Communication-Intensive Performance in Julia},
+      author={Amal Rizvi and Kyle C. Hale},
+      year={2021},
+      eprint={2109.14072},
+      pdf = {https://arxiv.org/pdf/2109.14072.pdf},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC}
+}
+
+@inproceedings{ROMERO:2021:CADM,
+  author = {Eduardo Romero-Gainza, Christopher Stewart, Angela Li, Kyle Hale, and Nathaniel Morris},
+  title = {Memory Mapping and Parallelizing Random Forests for Speed and Cache Efficiency},
+  booktitle = {International Workshop on Parallel and Distributed Algorithms for Decision Sciences},
+  year = {2021},
+  month = {August},
+  doi = {10.1145/3458744.3474052},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  abstract = {Memory mapping enhances decision tree implementations by enabling constant-time statistical inference, and is particularly effective when memory mapped tables fit in processor cache. However, memory mapping is more challenging when applied to random forests—ensembles of many trees—as the table sizes can easily outstrip cache capacity. We argue that careful system design for parallel and cache efficiency can make memory mapping effective for random forests. Our preliminary results show memory-mapped forests can speed up inference latency by a factor of up to 30 × .},
+  url = {https://doi.org/10.1145/3458744.3474052},
+  location = {Lemont, IL, USA},
+  series = {ICPP Workshops '21},
+}
+
+@inproceedings{SWIECH:2014:VMMHTM,
+ author = {Swiech, Maciej and Hale, Kyle C. and Dinda, Peter A.},
+ title = {VMM emulation of Intel hardware transactional memory}
+ month = {June},
+ isbn = {9781450329507},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2612262.2612265},
+doi = {10.1145/2612262.2612265},
+abstract = {We describe the design, implementation, and evaluation of emulated hardware transactional memory, specifically the Intel Haswell Restricted Transactional Memory (RTM) architectural extensions for x86/64, within a virtual machine monitor (VMM). Our system allows users to investigate RTM on hardware that does not provide it, debug their RTM-based transactional software, and stress test it on diverse emulated hardware configurations, including potential future configurations that might support arbitrary length transactions. Initial performance results suggest that we are able to accomplish this approximately 60 times faster than under a full emulator. A noteworthy aspect of our system is a novel page-flipping technique that allows us to completely avoid instruction emulation, and to limit instruction decoding to only that necessary to determine instruction length. This makes it possible to implement RTM emulation, and potentially other techniques, far more compactly than would otherwise be possible. We have implemented our system in the context of the Palacios VMM. Our techniques are not specific to Palacios, and could be implemented in other VMMs.},
+booktitle = {Proceedings of the 4th International Workshop on Runtime and Operating Systems for Supercomputers},
+articleno = {4},
+numpages = {8},
+location = {Munich, Germany},
+series = {ROSS '14}
+}
+
+@inproceedings{TAURO:2019:SPEEDUP,
+ author = {Tauro, Brian and Liu, Conghao and Hale, Kyle C.},
+ title = {Modeling Speedup in Multi-OS Environments},
+ booktitle = {Proceedings of the 27th IEEE International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems},
+ month = {October},
+ pdf = {https://www.hale-legacy.com/docs/multios-mascots19.pdf},
+ abstract = {For workloads that place strenuous demands on system software, novel operating system designs like unikernels, library OSes, and hybrid runtimes offer a promising path forward. However, while these systems can outperform general-purpose OSes, they have limited ability to support legacy applications. Multi-OS environments, where the application's execution is split between a compute plane and a data plane operating system, can address this challenge, but reasoning about the performance of applications that run in such a split execution environment is currently guided only by expert intuition and empirical analysis. As the level of specialization in system software and hardware continues to increase, there is both a pressing need and ripe opportunity for investigating analytical models that can predict application performance and guide programmers' intuition when considering multi-OS environments. In this paper we present such a model to place bounds on application speedup, beginning with a simple, intuitive formulation, and progressing to a more refined, predictive model. We present an analysis of the model, apply it to a diverse set of benchmarks, and evaluate it using a prototype measurement tool for analyzing workload characteristics relevant for multi-OS environments.},
+ year = {2019},
+ series = {MASCOTS '19},
+ doi={10.1109/MASCOTS.2019.00044},
+ pages = {336-346},
+ location = {Rennes, France},
+}
+
+@Article{TAURO:2021:SPEEDUP,
+ title = {Modeling Speedup in Multi-OS Environments},
+ author = {Tauro, Brian and Liu, Conghao and Hale, Kyle C.},
+ journal = {IEEE Transactions on Parallel and Distributed Systems},
+ month = {September},
+ volume = {33},
+ number = {6},
+ doi = {10.1109/TPDS.2021.3114984},
+ year = {2022},
+ pages = {1436--1450},
+ abstract = {For workloads that place strenuous demands on system software, novel operating system designs like unikernels, library OSes, and hybrid runtimes offer a promising path forward. However, while these systems can outperform general-purpose OSes, they have limited ability to support legacy applications. Multi-OS environments, where the application’s execution is split between a control plane and a data plane operating system, can address this challenge, but reasoning about the performance of applications that run in such a split execution environment is currently guided only by expert intuition and empirical analysis. As the level of specialization in system software and hardware continues to increase, there is both a pressing need and ripe opportunity for investigating analytical models that can predict application performance and guide programmers’ intuition when considering multi-OS environments. In this paper we present such a model to place bounds on application speedup, beginning with a simple, intuitive formulation, and progressing to a more refined model. We present an analysis of the model for a diverse set of benchmarks, as well as a prototype tool to project multi-OS speedups for applications on existing systems. Finally, we validate our model on state-of-the-art multi-OS systems, demonstrating that it reliably predicts speedup with 96% average accuracy.}
+}
+
+@InProceedings{wanninger2022virtines,
+    author = {Wanninger, Nicholas C. and Bowden, Joshua J. and Shetty, Kirtankumar and Garg, Ayush and Hale, Kyle C.},
+    title = {Isolating Functions at the Hardware Limit with Virtines},
+    year = {2022},
+    mont = {April},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3492321.3519553},
+    doi = {10.1145/3492321.3519553},
+    booktitle = {Proceedings of the Seventeenth European Conference on Computer Systems},
+    pages = {644--662},
+    numpages = {19},
+    location = {Rennes, France},
+    abstract = {An important class of applications, including programs that leverage third-party libraries, programs that use user-defined functions in databases, and serverless applications, benefit from isolating the execution of untrusted code at the granularity of individual functions or function invocations. However, existing isolation mechanisms were not designed for this use case; rather, they have been adapted to it. We introduce virtines, a new abstraction designed specifically for function granularity isolation, and describe how we build virtines from the ground up by pushing hardware virtualization to its limits. Virtines give developers fine-grained control in deciding which functions should run in isolated environments, and which should not. The virtine abstraction is a general one, and we demonstrate a prototype that adds extensions to the C language. We present a detailed analysis of the overheads of running individual functions in isolated VMs, and guided by those findings, we present Wasp, an embeddable hypervisor that allows programmers to easily use virtines. We describe several representative scenarios that employ individual function isolation, and demonstrate that virtines can be applied in these scenarios with only a few lines of changes to existing codebases and with acceptable slowdowns.},
+    series = {EuroSys '22}
+}
+
+@inproceedings{XIA:2014:CONCORD,
+    author = {Xia, Lei and Hale, Kyle and Dinda, Peter},
+title = {ConCORD: Easily Exploiting Memory Content Redundancy through the Content-Aware Service Command},
+year = {2014},
+month = {June},
+isbn = {9781450327497},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2600212.2600214},
+doi = {10.1145/2600212.2600214},
+abstract = {We argue that memory content-tracking across the nodes of a parallel machine should be factored into a distinct platform service on top of which application services can be built. ConCORD is a proof-of-concept system that we have developed and evaluated to test this claim. Our core insight is that many application services can be described as a query over memory content. This insight leads to a core concept in ConCORD, the content-aware service command architecture, in which an application service is implemented as a parametrization of a single general query that ConCORD knows how to execute well. ConCORD dynamically adapts the execution of the query to the amount of redundancy available and other factors. We show that a complex application service (collective checkpointing) can be implemented in only hundreds of lines of code within ConCORD, while performing well.},
+booktitle = {Proceedings of the 23rd International Symposium on High-Performance Parallel and Distributed Computing},
+pages = {25–36},
+numpages = {12},
+keywords = {content sharing, hpc, memory deduplication, virtualization},
+location = {Vancouver, BC, Canada},
+series = {HPDC '14}
+}
+
+@inproceedings{ZENG:2021:CAT,
+  author = {Qitian Zeng, Kyle C. Hale, and Boris Glavic},
+  title = {Playing Fetch with {CAT}: Composing Cache Partitioning and Prefetching for Task-Based Query Processing},
+  booktitle = {Proceedings of the 17th International Workshop on Data Management on New Hardware},
+  year = {2021},
+  month = {June},
+  isbn = {9781450385565},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3465998.3466016},
+  doi = {10.1145/3465998.3466016},
+  articleno = {15},
+  numpages = {5},
+  abstract = {Software prefetching and hardware-based cache allocation techniques (CAT) have been successfully applied in main-memory database engines to fetch data into cache before it is needed and to partition a shared last-level cache (LLC) to prevent concurrent tasks from evicting each others' data. We investigate the interaction of these techniques and demonstrate that while a single prefetching strategy is sufficient, the combination of both techniques is only effective if the cache partitioning strategy adapts the partitioning based on the types of tasks currently sharing an LLC. We present a simple, yet effective, scheme that uses prefetching and adapts cache partition allocations dynamically.},
+  location = {Virtual Event, China},
+  series = {DaMoN'21}
+}
+
+@inproceedings{ROMERO:2022:BOLT,
+author = {Romero, Eduardo and Stewart, Christopher and Li, Angela and Hale, Kyle and Morris, Nathaniel},
+title = {Bolt: Fast Inference for Random Forests},
+year = {2022},
+month = {October},
+isbn = {9781450393409},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3528535.3531519},
+doi = {10.1145/3528535.3531519},
+abstract = {Random forests use ensembles of decision trees to boost accuracy for machine learning tasks. However, large ensembles slow down inference on platforms that process each tree in an ensemble individually. We present Bolt, a platform that restructures whole random forests, not just individual trees, to speed up inference. Conceptually, Bolt maps every path in each tree to a lookup table which, if cache were large enough, would allow inference with just one memory access. When the size of the lookup table exceeds cache capacity, Bolt employs a novel combination of lossless compression, parameter selection, and bloom filters to shrink the table while preserving fast inference. We compared inference speed in Bolt to three state-of-the-art platforms: Python Scikit-Learn, Ranger, and Forest Packing. We evaluated these platforms using datasets with vision, natural language processing and categorical applications. We observed that on ensembles of shallow decision trees Bolt can run 2--14X faster than competing platforms and that Bolt's speedups persist as the number of decision trees in an ensemble increases.},
+booktitle = {Proceedings of the 23rd ACM/IFIP International Middleware Conference},
+pages = {94–106},
+numpages = {13},
+location = {Quebec, QC, Canada},
+series = {Middleware '22}
+}
+
+

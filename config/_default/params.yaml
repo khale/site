@@ -9,7 +9,11 @@ appearance:
   theme_day: minimal
   theme_night: minimal
   font: minimal
-  font_size: L
+  font_size: M
+
+publications:
+  date_format: "January 2006"
+  citation_style: "apa"
 
 # SEO
 
@@ -17,9 +21,9 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Wowchemy website builder.'
-    twitter: 'wowchemy'
+    org_name: 'Illinois Institute of Technology'
+    description: 'Personal webpage for Kyle C. Hale.'
+    twitter: 
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -32,7 +36,7 @@ marketing:
 header:
   navbar:
     enable: true
-    align: l
+    align: r
     show_logo: true
     show_language: false
     show_day_night: true
@@ -43,7 +47,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© 2023 Kyle C. Hale.'
     license:
       enable: true
       allow_derivatives: false

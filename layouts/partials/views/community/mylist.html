@@ -1,0 +1,50 @@
+{{ $item := .item }}
+
+{{/* Dynamic view adjusts to content type. */}}
+{{ $icon_pack := "far" }}
+{{ $icon := "fa-file-alt" }}
+{{ $show_authors := false }}
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+{{ if eq $item.Type "post" }}
+  {{ $icon = "fa-newspaper" }}
+{{ else if eq $item.Type "event" }}
+  {{ $icon = "fa-calendar-alt" }}
+{{ else if eq $item.Type "publication" }}
+  {{ $show_authors = true }}
+{{ else if eq $item.Type "project" }}
+  {{ $icon_pack = "fas" }}
+  {{ $icon = "fa-project-diagram" }}
+  {{ $show_authors = true }}
+{{ end }}
+
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+  
+<div class="view-list view-list-item">
+  <kbd>{{$item.Params.venue}}</kbd>
+  <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a><br>
+    {{ if $item.Params.award }}
+  <awd>{{$item.Params.award}}</awd>
+    {{ end }}
+
+  <div class="article-metadata">
+    {{ if and $show_authors $item.Params.authors }}
+      <big>{{ partial "page_metadata_authors" $item }}</big><br>
+    {{ end }}
+    {{ if $item.Params.publication }}
+    <big>{{- $item.Params.publication | markdownify -}},</big>
+  {{ end }}
+  <big>{{- $item.Date.Format " January 2006" -}}.</big>
+  </div>
+
+  {{ if $has_attachments }}
+  <div class="btn-links">
+    {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+  </div>
+  {{ end }}
+  <br>
+</div>

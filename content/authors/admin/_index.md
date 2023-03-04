@@ -8,13 +8,13 @@ last_name: Hale
 
 # Status emoji
 status:
-#  icon: ☕️
+  #icon: ☕️
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Assistant Professor of Computer Science 
+role: Assistant Professor of [Computer Science](https://iit.edu/computer-science)
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -29,22 +29,22 @@ bio: Hale's research lies at the intersection of operating systems, HPC, paralle
 interests:
 - Operating Systems & Virtualization
 - Distributed Systems
-- Parallel & High-Performance Computing
+- High-Performance & Parallel Computing
 - Computer Architecture
 - System Security
 
 # Education to show in About widget
-education:
-  courses:
-  - course: PhD in Computer Science
-    institution: Northwestern University
-    year: 2016
-  - course: MS in Computer Science
-    institution: Northwestern University
-    year: 2013
-  - course: BS in Computer Science
-    institution: The University of Texas at Austin
-    year: 2010
+#education:
+  #courses:
+  #- course: PhD in Computer Science
+    #institution: Northwestern University
+    #year: 2016
+  #- course: MS in Computer Science
+    #institution: Northwestern University
+    #year: 2013
+  #- course: BS in Computer Science
+    #institution: The University of Texas at Austin
+    #year: 2010
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons

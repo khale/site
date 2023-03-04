@@ -1,0 +1,14 @@
+@inproceedings{NOOKALA:2021:XQUEUE,
+ abstract = {Enabling efficient fine-grained task parallelism is a significant challenge for hardware platforms with increasingly many cores. Existing techniques do not scale to hundreds of threads due to the high cost of synchronization in concurrent data structures. To overcome these limitations we present XQueue, a novel lock-less concurrent queuing system with relaxed ordering semantics that is geared towards realizing scalability up to hundreds of concurrent threads. We demonstrate the scalability of XQueue using microbenchmarks and show that XQueue can deliver concurrent operations with latencies as low as 110 cycles at scales of up to 192 cores (up to 6900× improvement compared to traditional synchronization mechanisms) across our diverse hardware, including x86, ARM, and Power9. The reduced latency allows XQueue to provide orders of magnitude (3300×) better throughput that existing techniques. To evaluate the real-world benefits of XQueue, we integrated XQueue with LLVM OpenMP and evaluated five unmodified benchmarks from the Barcelona OpenMP Task Suite (BOTS) as well as a graph traversal benchmark from the GAP benchmark suite. We compared the XQueue-enabled LLVM OpenMP implementation with the native LLVM and GNU OpenMP versions. Using fine-grained task workloads, XQueue can deliver 4× to 6× speedup compared to native GNU OpenMP and LLVM OpenMP in many cases, with speedups as high as 116× in some cases.},
+ author = {Poornima Nookala, Peter Dinda, Kyle C. Hale, Ioan Raicu, and Kyle Chard},
+ booktitle = {Proceedings of the 28th IEEE International Symposium on the Modeling, Analysis, and Simulation of Computer and
+Telecommunication Systems},
+ doi = {10.1109/MASCOTS53633.2021.9614292},
+ location = {Virtual conference},
+ month = {November},
+ publisher = {IEEE},
+ series = {MASCOTS '21},
+ title = {Extremely Fine-grained Parallelism via Scalable Concurrent Queues on Modern Many-core Architectures},
+ year = {2021}
+}
+

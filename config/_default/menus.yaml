@@ -7,21 +7,24 @@ main:
   - name: Home
     url: '#about'
     weight: 10
-  - name: Posts
-    url: '#posts'
+  - name: News
+    url: '#news'
     weight: 20
-  - name: Projects
-    url: '#projects'
-    weight: 30
-  - name: Talks
-    url: '#talks'
-    weight: 40
   - name: Publications
-    url: '#featured'
+    url: '#pubs'
+    weight: 30
+  - name: Teaching
+    url: '#teaching'
     weight: 50
-  - name: Contact
-    url: '#contact'
+  - name: Funding
+    url: "#funding"
     weight: 60
+  - name: HExSA Lab
+    url: '/lab'
+    weight: 70
+  - name: Personal
+    url: "/other"
+    weight: 80
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
