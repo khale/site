@@ -15,6 +15,14 @@
   {{ partial "page_header.html" . }}
 
   <div class="article-container">
+    {{ if or (.Params.award) (.Params.ugrad) }}
+    {{ end }}
+    {{ if .Params.award }}
+    <awd>{{.Params.award}}</awd>
+    {{ end }}
+    {{ if .Params.ugrad }}
+    <ugrs>Undergraduate Research</ugrs>
+    {{ end }} 
 
     {{ if .Params.abstract }}
     <h3>{{ i18n "abstract" }}</h3>

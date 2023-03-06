@@ -30,6 +30,9 @@
     {{ if $item.Params.award }}
   <awd>{{$item.Params.award}}</awd>
     {{ end }}
+    {{ if $item.Params.ugrad }}
+    <ugrs>Undergraduate Research</ugrs>
+    {{ end }}
 
   <div class="article-metadata">
     {{ if and $show_authors $item.Params.authors }}

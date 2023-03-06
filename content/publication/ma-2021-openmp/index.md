@@ -25,6 +25,7 @@ lastmod: 2023-03-04T12:55:25-06:00
 featured: false
 draft: false
 venue: SC '21
+ugrad: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

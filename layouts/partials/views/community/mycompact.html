@@ -26,10 +26,15 @@
 
 <div class="view-list view-list-item">
     <kbd>{{$item.Params.venue}}</kbd> <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
-    {{ if $item.Params.award }}
+    {{ if or ($item.Params.award) ($item.Params.ugrad) }}
     <br>
+    {{ end }}
+    {{ if $item.Params.award }}
     <awd>{{$item.Params.award}}</awd>
     {{ end }}
+    {{ if $item.Params.ugrad }}
+    <ugrs>Undergraduate Research</ugrs>
+    {{ end }} 
 
 
 {{/* Get conference. */}}
