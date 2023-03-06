@@ -59,7 +59,7 @@ links:
 - name: DOI
   icon_pack: ai
   icon: doi
-  url: 10.1109/MASCOTS53633.2021.9614292
+  url: https://dx.doi.org/10.1109/MASCOTS53633.2021.9614292
 - name: IEEE
   icon_pack: ai
   icon: ieee

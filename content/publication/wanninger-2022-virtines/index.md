@@ -19,6 +19,9 @@ draft: false
 venue: EuroSys '22
 award: Giles Muller Best Artifact Award
 ugrad: true
+acm_functional: true
+acm_available: true
+acm_reproduced: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

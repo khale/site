@@ -26,7 +26,25 @@
   
 <div class="view-list view-list-item">
   <kbd>{{$item.Params.venue}}</kbd>
-  <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a><br>
+  <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
+    {{ if $item.Params.acm_available }}
+    <acm_avail></acm_avail>
+    {{ end }}
+    {{ if $item.Params.acm_functional }}
+    <acm_func></acm_func>
+    {{ end }}
+    {{ if $item.Params.acm_reusable }}
+    <acm_reuse></acm_reuse>
+    {{ end }}
+    {{ if $item.Params.acm_reproduced }}
+    <acm_repr></acm_repr>
+    {{ end }}
+    {{ if $item.Params.acm_replicated }}
+    <acm_repl></acm_repl>
+    {{ end }}
+
+    <br>
+
     {{ if $item.Params.award }}
   <awd>{{$item.Params.award}}</awd>
     {{ end }}

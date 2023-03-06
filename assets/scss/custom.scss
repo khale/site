@@ -129,3 +129,47 @@ ugrs,
 }
 
 
+acm_func,
+.acm_func {
+    /*margin: 0px 0.1em;*/
+    padding: 0.3em .6em;
+    background: url("/functional.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+acm_repr,
+.acm_repr {
+    /*margin: 0px 0.1em;*/
+    padding: 0.3em .6em;
+    background: url("/reproduced.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+acm_repl,
+.acm_repl {
+    /*margin: 0px 0.1em;*/
+    padding: 0.3em .6em;
+    background: url("/replicated.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+acm_reuse,
+.acm_reuse {
+    /*margin: 0px 0.1em;*/
+    padding: 0.3em .6em;
+    background: url("/reusable.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+acm_avail,
+.acm_avail {
+    /*margin: 0px 0.1em;*/
+    padding: 0.3em .6em;
+    background: url("/available.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

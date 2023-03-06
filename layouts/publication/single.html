@@ -24,6 +24,22 @@
     <ugrs>Undergraduate Research</ugrs>
     {{ end }} 
 
+    {{ if .Params.acm_available }}
+    <acm_avail></acm_avail>
+    {{ end }}
+    {{ if .Params.acm_functional }}
+    <acm_func></acm_func>
+    {{ end }}
+    {{ if .Params.acm_reusable }}
+    <acm_reuse></acm_reuse>
+    {{ end }}
+    {{ if .Params.acm_reproduced }}
+    <acm_repr></acm_repr>
+    {{ end }}
+    {{ if .Params.acm_replicated }}
+    <acm_repl></acm_repl>
+    {{ end }}
+
     {{ if .Params.abstract }}
     <h3>{{ i18n "abstract" }}</h3>
     <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>

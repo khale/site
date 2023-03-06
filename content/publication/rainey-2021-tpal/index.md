@@ -21,6 +21,7 @@ lastmod: 2023-03-04T13:00:33-06:00
 featured: false
 draft: false
 venue: PLDI '21
+acm_functional: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

@@ -48,7 +48,7 @@ links:
 - name: DOI
   icon_pack: ai
   icon: doi
-  url: 10.1145/3458744.3474052
+  url: https://dx.doi.org/10.1145/3458744.3474052
 - name: ACM
   icon_pack: ai
   icon: acmdl

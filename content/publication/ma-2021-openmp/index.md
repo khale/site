@@ -26,6 +26,7 @@ featured: false
 draft: false
 venue: SC '21
 ugrad: true
+acm_available: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
