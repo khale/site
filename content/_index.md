@@ -13,6 +13,18 @@ sections:
       # Override your bio text from `authors/admin/_index.md`?
       text:
   - block: collection
+    id: pubs
+    content:
+      title: Recent Papers
+      count: 10
+      filters:
+        folders:
+          - publication
+        exclude_featured: true
+    design:
+      columns: '2'
+      view: community/mycompact
+  - block: collection
     id: news
     content:
       title: News
@@ -39,18 +51,6 @@ sections:
       # Choose a layout view
       view: compact
       columns: '2'
-  - block: collection
-    id: pubs
-    content:
-      title: Recent Papers
-      count: 10
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: community/mycompact
   - block: collection
     id: teaching
     content:

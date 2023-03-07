@@ -7,11 +7,11 @@ main:
   - name: Home
     url: '#about'
     weight: 10
-  - name: News
-    url: '#news'
-    weight: 20
   - name: Publications
     url: '#pubs'
+    weight: 20
+  - name: News
+    url: '#news'
     weight: 30
   - name: Teaching
     url: '#teaching'
