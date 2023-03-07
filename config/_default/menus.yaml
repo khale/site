@@ -22,6 +22,9 @@ main:
   - name: HExSA Lab
     url: '/lab'
     weight: 70
+  - name: Service
+    url: "/service"
+    weight: 75
   - name: Personal
     url: "/other"
     weight: 80
