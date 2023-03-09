@@ -21,6 +21,7 @@ organizations:
 - name: Illinois Institute of Technology
   url: "https://iit.edu"
 - name: HExSA Lab
+  url: "/lab"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Hale's research lies at the intersection of operating systems, HPC, parallel computing, computer architecture.
@@ -78,9 +79,9 @@ highlight_name: true
 ---
 
 I am an Assistant Professor in the [Department of Computer
-Science](http://cs.iit.edu/) at the [Illinois Institute of
+Science](http://iit.edu/computer-science) at the [Illinois Institute of
 Technology](https://www.iit.edu). I lead the [laboratory for high-performance,
-experimental systems and architecture (HExSA)](#lab) where we focus on various aspects
+experimental systems and architecture (HExSA)](/lab) where we focus on various aspects
 of computer systems research.  My research interests
 span several areas in systems including OS, computer architecture, embedded
 systems, system security, and virtualization. A current primary focus of our
