@@ -14,7 +14,7 @@ date: '2022-09-01'
 lastmod: 2023-03-03T15:10:28-06:00
 featured: false
 draft: false
-venue: TPDS '22
+venue: TPDS 33(6); 2022
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
