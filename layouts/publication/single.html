@@ -15,6 +15,7 @@
   {{ partial "page_header.html" . }}
 
   <div class="article-container">
+  <kbd>{{.Params.venue}}</kbd>
     {{ if or (.Params.award) (.Params.ugrad) }}
     {{ end }}
     {{ if .Params.award }}
