@@ -88,12 +88,12 @@ systems, system security, and virtualization. A current primary focus of our
 lab is the design of specialized system software stacks for parallel and
 emerging computing applications. You can see my publications [below](#pubs).
 
+I have been fortunate to receive the NSF CAREER award (2023-2028), as well as the IIT College of Computing's Excellence in Teaching and Excellence in Research awards. 
 
-I received my PhD from [Northwestern University](https://northwestern.edu) in
-2016 under the guidance of [Peter Dinda](http://pdinda.org).  Before that
+I received my PhD from [Northwestern University](https://northwestern.edu), where I worked with [Peter Dinda](http://pdinda.org).  Before that
 I received my B.S. in computer science from UT Austin, where I worked with [Boris Grot](http://homepages.inf.ed.ac.uk/bgrot/)
 and 
-[Steve Keckler](https://research.nvidia.com/person/stephen-keckler).
+[Steve Keckler](https://research.nvidia.com/person/stephen-keckler). I owe a lot to the [McNair program](https://diversity.utexas.edu/academic-equity/mcnairscholars/) and the [Turing Scholars program](https://www.cs.utexas.edu/turing-scholars) at UT Austin, both of which helped put me on the path to research. 
 
 **I am actively looking for new PhD students! Students interested in working with me
 should see [this page]({{< ref "/recruiting" >}})**.
