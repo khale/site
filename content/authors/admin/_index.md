@@ -14,7 +14,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Assistant Professor of [Computer Science](https://iit.edu/computer-science)
+role: Associate Professor of [Computer Science](https://iit.edu/computer-science)
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -78,7 +78,7 @@ email: ''
 highlight_name: true
 ---
 
-I am an Assistant Professor in the [Department of Computer
+I am an Associate Professor in the [Department of Computer
 Science](http://iit.edu/computer-science) at the [Illinois Institute of
 Technology](https://www.iit.edu). I lead the [laboratory for high-performance,
 experimental systems and architecture (HExSA)](/lab) where we focus on various aspects
