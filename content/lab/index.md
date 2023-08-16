@@ -24,6 +24,9 @@ Much of our code is available on [GitHub{{<icon name="github" pack="fab">}}](htt
 - [Nanda Velugoti](#)
 - [Xincheng Yang](https://www.linkedin.com/in/xincheng-yang-862519134/)
 
+### Undergraduates
+- [Jamison Kerney](https://www.linkedin.com/in/jamison-kerney-955a111b8/)
+
 ### Publications
 
 See [here]({{< ref "/#pubs" >}}).
@@ -37,7 +40,7 @@ See [here]({{< ref "/#pubs" >}}).
 
 
 ### Undergraduates
-- Karl Hallsby
+- [Karl Hallsby](https://www.linkedin.com/in/karlhallsby/)
 - [Joshua Bowden](https://jbowden.me/)
 - [Nick Wanninger](https://nickw.io/)
 - [Hussain Khajanchi](https://www.linkedin.com/in/hussainkhajanchi/)
