@@ -6,7 +6,7 @@ summary: ""
 authors: [admin]
 tags: [systems, security, networking]
 categories: []
-date: 2020-03-15T13:27:28-05:00
+date: 2023-08-15T13:27:28-05:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -39,6 +39,8 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+Current Iteration: [Fall '23](https://khale.github.io/iit-csp544-f23-site/)
 
 Past Iterations:
 * Spring '22
