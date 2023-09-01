@@ -36,6 +36,6 @@ publishDate: '2023-09-01T18:47:43.221047Z'
 publication_types:
 - '1'
 abstract: ''
-publication: '*Proceedings of the 29th ACM International Conference on Architectural Support
-  for Programming Languages and Operating Systems (to appear)*'
+publication: "*Proceedings of the 29th ACM International Conference on Architectural Support
+  for Programming Languages and Operating Systems (to appear)*"
 ---
