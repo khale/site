@@ -17,6 +17,9 @@ lastmod: 2023-09-01T13:48:03-05:00
 featured: false
 draft: false
 venue: ASPLOS '24
+acm_functional: true
+acm_available: true
+acm_reproduced: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
