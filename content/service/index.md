@@ -14,6 +14,8 @@ comments: false  # Show comments?
 - Local Chair, ICS 2017
 
 ## Technical Program Committees
+- HPDC 2024
+- HCDS 2024
 - USENIX ATC 2023
 - IPDPS 2020, 2021, 2022, 2023
 - ICDCS 2021, 2022
@@ -41,6 +43,7 @@ comments: false  # Show comments?
 - DATE 2012
 
 ## Journal Reviewing
+- Journal of Supercomputing 2024
 - TPDS 2016, 2018, 2021
 - JPDC 2019
 - CCPE 2018
