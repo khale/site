@@ -42,7 +42,7 @@ slides: ""
 ---
 
 NSF Award [CCF-2028958](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2028958&HistoricalAwards=false);
-$41,627 (Collaborative total: $1.2M); October 2020 through September 2021. This project is a collaborative effort with
+$41,627 (Collaborative total: $250K); October 2020 through September 2021. This project is a collaborative effort with
 [Peter Dinda](http://pdinda.org), [Simone Campanoni](https://users.cs.northwestern.edu/~simonec/), and [Nikos Hardavellas](https://users.cs.northwestern.edu/~hardav/)
 at [Northwestern University](https://northwestern.edu), and [Umut acar](http://www.umut-acar.org/) at [Carnegie Mellon University](https://www.cmu.edu/).
 
