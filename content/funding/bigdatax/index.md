@@ -41,7 +41,7 @@ slides: ""
 ---
 
 NSF Award [CCF-1757964](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1757964&HistoricalAwards=false); 
-$333,106; February 2018 through January 2021. This project is in collaboration with [Ioan Raicu](http://www.cs.iit.edu/~iraicu/) at IIT
+$333,106 (Collaborative Total: $368K); February 2018 through January 2021. This project is in collaboration with [Ioan Raicu](http://www.cs.iit.edu/~iraicu/) at IIT
 as well as [Kyle Chard](https://kylechard.com) and [Aaron Elmore](http://people.cs.uchicago.edu/~aelmore/) at the University of Chicago.
 
 This project extends the BigDataX program, a Research Experiences for
