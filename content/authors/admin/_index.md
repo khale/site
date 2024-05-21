@@ -76,6 +76,10 @@ email: ''
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
+
+# OLD
+#**I am actively looking for new PhD students! Students interested in working with me
+#should see [this page]({{< ref "/recruiting" >}})**.
 ---
 
 I am an Associate Professor in the [Department of Computer
@@ -95,8 +99,7 @@ I received my B.S. in computer science from UT Austin, where I worked with [Bori
 and 
 [Steve Keckler](https://research.nvidia.com/person/stephen-keckler). I owe a lot to the [McNair program](https://diversity.utexas.edu/academic-equity/mcnairscholars/) and the [Turing Scholars program](https://www.cs.utexas.edu/turing-scholars) at UT Austin, both of which helped put me on the path to research. 
 
-**I am actively looking for new PhD students! Students interested in working with me
-should see [this page]({{< ref "/recruiting" >}})**.
+
 
 If you're an undergrad considering research or going to grad school, you should take
 a look at [this page]({{< ref "/ugrad-research" >}}). 
