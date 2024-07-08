@@ -97,10 +97,10 @@ I have been fortunate to receive the NSF CAREER award (2023-2028), as well as th
 I received my PhD from [Northwestern University](https://northwestern.edu), where I worked with [Peter Dinda](http://pdinda.org).  Before that
 I received my B.S. in computer science from UT Austin, where I worked with [Boris Grot](http://homepages.inf.ed.ac.uk/bgrot/)
 and 
-[Steve Keckler](https://research.nvidia.com/person/stephen-keckler). I owe a lot to the [McNair program](https://diversity.utexas.edu/academic-equity/mcnairscholars/) and the [Turing Scholars program](https://www.cs.utexas.edu/turing-scholars) at UT Austin, both of which helped put me on the path to research. 
-
 
 
 If you're an undergrad considering research or going to grad school, you should take
 a look at [this page]({{< ref "/ugrad-research" >}}). 
+
+**I will be transitioning to Oregon State University in the Fall of 2024**
 
