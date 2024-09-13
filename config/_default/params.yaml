@@ -21,7 +21,7 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: 'Illinois Institute of Technology'
+    org_name: 'Oregon State University'
     description: 'Personal webpage for Kyle C. Hale.'
     twitter: 
   analytics:
@@ -47,7 +47,7 @@ header:
 
 footer:
   copyright:
-    notice: '© 2023 Kyle C. Hale.'
+    notice: '© 2024 Kyle C. Hale.'
     license:
       enable: true
       allow_derivatives: false

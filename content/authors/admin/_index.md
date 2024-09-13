@@ -14,12 +14,12 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Associate Professor of [Computer Science](https://iit.edu/computer-science)
+role: Associate Professor of [Computer Science](https://engineering.oregonstate.edu/EECS)
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Illinois Institute of Technology
-  url: "https://iit.edu"
+- name: Oregon State University
+  url: "https://oregonstate.edu"
 - name: HExSA Lab
   url: "/lab"
 
@@ -54,7 +54,7 @@ interests:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:khale1@iit.edu'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:halekyle@oregonstate.edu'  # For a direct email link, use "mailto:test@example.org".
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=zYAOJqwAAAAJ&hl=en
@@ -82,9 +82,9 @@ highlight_name: true
 #should see [this page]({{< ref "/recruiting" >}})**.
 ---
 
-I am an Associate Professor in the [Department of Computer
-Science](http://iit.edu/computer-science) at the [Illinois Institute of
-Technology](https://www.iit.edu). I lead the [laboratory for high-performance,
+I am an Associate Professor in the [School of Electrical Engineering and Computer
+Science](https://engineering.oregonstate.edu/EECS) at [Oregon State University](https://oregonstate.edu/).
+I was previously at Illinois Tech. I lead the [laboratory for high-performance,
 experimental systems and architecture (HExSA)](/lab) where we focus on various aspects
 of computer systems research.  My research interests
 span several areas in systems including OS, computer architecture, embedded
@@ -101,6 +101,3 @@ and
 
 If you're an undergrad considering research or going to grad school, you should take
 a look at [this page]({{< ref "/ugrad-research" >}}). 
-
-**I will be transitioning to Oregon State University in the Fall of 2024**
-
