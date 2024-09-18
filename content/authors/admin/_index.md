@@ -95,7 +95,7 @@ emerging computing applications. You can see my publications [below](#pubs).
 I have been fortunate to receive the NSF CAREER award (2023-2028), as well as the IIT College of Computing's Excellence in Teaching and Excellence in Research awards. 
 
 I received my PhD from [Northwestern University](https://northwestern.edu), where I worked with [Peter Dinda](http://pdinda.org).  Before that
-I received my B.S. in computer science from UT Austin, where I worked with [Boris Grot](http://homepages.inf.ed.ac.uk/bgrot/)
+I received my B.S. in computer science from UT Austin.
 and 
 
 
