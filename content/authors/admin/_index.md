@@ -96,7 +96,6 @@ I have been fortunate to receive the NSF CAREER award (2023-2028), as well as th
 
 I received my PhD from [Northwestern University](https://northwestern.edu), where I worked with [Peter Dinda](http://pdinda.org).  Before that
 I received my B.S. in computer science from UT Austin.
-and 
 
 
 If you're an undergrad considering research or going to grad school, you should take
