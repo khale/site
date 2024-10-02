@@ -40,9 +40,10 @@ url_video: ""
 slides: ""
 ---
 
-Current Iteration: [Spring '24](https://khale.github.io/iit-cs562-s24-site/)
+# Current Iteration: 
 
 Past Iterations:
+* Spring '24
 * Spring '22
 * Fall '19
 * Fall '18

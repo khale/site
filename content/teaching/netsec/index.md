@@ -40,7 +40,7 @@ url_video: ""
 slides: ""
 ---
 
-Current Iteration: 
+# Current Iteration: 
 
 Past Iterations:
 * Fall '23
