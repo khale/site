@@ -9,14 +9,15 @@ comments: false  # Show comments?
 
 ---
 
-## Conference Organization
+## Conference and Workshop Organization
 - Local Chair, GCASR 2023
 - Local Chair, ICS 2017
+- Co-Organizer, MEMO workshop @ SC, 2024
 
 ## Technical Program Committees
 - HPDC 2024
-- HCDS 2024
-- USENIX ATC 2023
+- HCDS 2024, 2025
+- USENIX ATC 2023, 2025
 - IPDPS 2020, 2021, 2022, 2023
 - ICDCS 2021, 2022
 - ROSS 2022
