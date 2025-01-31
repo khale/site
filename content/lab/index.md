@@ -20,8 +20,7 @@ Much of our code is available on [GitHub{{<icon name="github" pack="fab">}}](htt
 
 ### Current PhD Students
 - [Conghao Liu](#)
-- [Brian Tauro](https://www.btauro.com/)
-- [Nanda Velugoti](#)
+- [Nanda Velugoti](https://nanda.one)
 - [Xincheng Yang](https://www.linkedin.com/in/xincheng-yang-862519134/)
 
 ### Undergraduates
@@ -37,6 +36,8 @@ See [here]({{< ref "/#pubs" >}}).
 
 ## Alumni
 
+### Ph.D. Graduates
+- [Brian Tauro](https://www.btauro.com/), Ph.D. 2024 (first employment: Intuitive)
 
 ### Undergraduates
 - [Jamison Kerney](https://jamiek.co/)
@@ -60,6 +61,7 @@ See [here]({{< ref "/#pubs" >}}).
 - [Zachary McKee](https://www.linkedin.com/in/zacharyrmckee/)
 
 ### Graduate Students
+- Ian Dougherty
 - [MD Ali](https://www.linkedin.com/in/md-aliev/)
 - [Kirtankumar Shetty](https://www.linkedin.com/in/kirtankshetty/)
 - [Ayush Garg](https://www.linkedin.com/in/sblayush/)
