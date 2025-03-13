@@ -15,7 +15,9 @@ comments: false  # Show comments?
 - Co-Organizer, MEMO workshop @ SC, 2024
 
 ## Technical Program Committees
+- ICS 2025
 - HPDC 2024
+- RESDIS 2024
 - HCDS 2024, 2025
 - USENIX ATC 2023, 2025
 - IPDPS 2020, 2021, 2022, 2023, 2024
