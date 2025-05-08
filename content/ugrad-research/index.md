@@ -1,9 +1,9 @@
 +++
-title= "Grad School Tips for Undergrads"
-summary= "Some tips for undergraduates interested in doing research and/or going to grad school"
+title= "PhD Application Tips for Undergrads/Masters Students"
+summary= "Some tips for undergrads/MS students interested in doing research and/or doing PhD"
 +++
 
-If you're an IIT undergraduate interested in doing a PhD in systems, you should
+If you're an OSU undergraduate/MS student interested in doing a PhD in systems, you should
 come talk to me (students from elsewhere wondering what I look for in a PhD
 student should see [here]({{< ref "/recruiting" >}})). Research can be
 incredibly exciting and fulfilling, but is also challenging. It requires a lot
