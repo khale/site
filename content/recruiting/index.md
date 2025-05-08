@@ -4,7 +4,7 @@ summary= "Students interested in working with me should read this page"
 +++
 
 I am currently looking for talented, hard-working PhD students broadly in the
-systems area. Our lab focuses on next generation experimental computer systems,
+systems area. Our group focuses on next generation experimental computer systems,
 with a particular emphasis on operating systems, high-performance computing,
 and computer architecture. We also do work in virtualization and cloud
 computing, security, high-performance networking, parallel programming
@@ -26,26 +26,16 @@ Particularly well-suited candidates will have experience with parallel
 programming and will have had experience working in substantial code bases, such
 as OSes, compilers, VMMs, emulators, or the like.
 
-## Why come to Illinois Tech and Chicago?
-[Illinois Tech (IIT)](https://iit.edu) is a rising star in the Chicago area, and both the
-university as a whole and the [CS department](https://iit.edu/computer-science) are undergoing a period of
-significant growth, with talented new faculty coming aboard every year.
-Illinois Tech's CS department has particular strength in the HPC and
-distributed systems area.
+## Why come to Oregon State and Corvallis?
+Our group is part of the broader [HPC group](https://hipcastor-osu.github.io/hipcastor-site/)
+at OSU, and in addition to core systems work, we also work with domain scientists in
+high-impact areas to accelerate core science workloads. 
 
-If you're looking for a top-notch graduate school experience, but prefer to
-live in a metropolitan area, Chicago is a fantastic choice. The tech scene is
-on the rise, with the City of Chicago showing significant interest in
-transforming the city into a tech hub. The big schools in the area form
-a tight-knit community of scholarship, so doing research in Chicago will
-present many opportunities for collaboration across institutions in the
-Midwestern US. Aside from the academic motivations for coming to Chicago, it
-would be difficult to find a more exciting city to live in while carrying out
-graduate studies. If you're interested in food culture, art, the theater,
-microbreweries and craft cocktails, great local coffee, a thriving live music
-and festival scene, a large swath of parks for cycling and running,
-comparatively cheap housing, great public transit, or sports, then you will
-enjoy living in Chicago. There really is something for everyone here.
+We are continuing to hire exceptional faculty in the systems area at OSU, and our grad
+program is now among the top 50 in the US, and continuing to rise. EECS at OSU is a large
+department, so whether you want to collaborate with roboticists, AI faculty, or electrical
+engineers, there are countless opportunities. 
 
-{{< gallery album="iit" image="iit-campus.jpg">}}
-
+Corvallis is a great place to pursue graduate studies. You can enjoy a beautiful college town within
+a breathtaking natural environment while pursuing cutting edge research. Portland is not far, 
+so you can also get the benefits of a large US metro. 

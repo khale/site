@@ -95,6 +95,7 @@ I have been fortunate to receive the NSF CAREER award (2023-2028), as well as th
 I received my PhD from [Northwestern University](https://northwestern.edu), where I worked with [Peter Dinda](http://pdinda.org).  Before that
 I received my B.S. in computer science from UT Austin.
 
+**I am currently recruiting highly motivated PhD students to join our [HPC group](https://hipcastor-osu.github.io/hipcastor-site/) at Oregon State. Please see [here]({{< ref "/recruiting" >}}) for more info.**
 
-If you're an undergrad considering research or going to grad school, you should take
+If you're an undergrad/MS student considering research or going to grad school, you should take
 a look at [this page]({{< ref "/ugrad-research" >}}). 
