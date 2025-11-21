@@ -329,19 +329,19 @@ series = {ROSS '14}
  doi = {10.1109/TPDS.2021.3114984},
  year = {2022},
  pages = {1436--1450},
- abstract = {For workloads that place strenuous demands on system software, novel operating system designs like unikernels, library OSes, and hybrid runtimes offer a promising path forward. However, while these systems can outperform general-purpose OSes, they have limited ability to support legacy applications. Multi-OS environments, where the application’s execution is split between a control plane and a data plane operating system, can address this challenge, but reasoning about the performance of applications that run in such a split execution environment is currently guided only by expert intuition and empirical analysis. As the level of specialization in system software and hardware continues to increase, there is both a pressing need and ripe opportunity for investigating analytical models that can predict application performance and guide programmers’ intuition when considering multi-OS environments. In this paper we present such a model to place bounds on application speedup, beginning with a simple, intuitive formulation, and progressing to a more refined model. We present an analysis of the model for a diverse set of benchmarks, as well as a prototype tool to project multi-OS speedups for applications on existing systems. Finally, we validate our model on state-of-the-art multi-OS systems, demonstrating that it reliably predicts speedup with 96% average accuracy.}
+ abstract = {For workloads that place strenuous demands on system software, novel operating system designs like unikernels, library OSes, and hybrid runtimes offer a promising path forward. However, while these systems can outperform general-purpose OSes, they have limited ability to support legacy applications. Multi-OS environments, where the application’s execution is split between a control plane and a data plane operating system, can address this challenge, but reasoning about the performance of applications that run in such a split execution environment is currently guided only by expert intuition and empirical analysis. As the level of specialization in system software and hardware continues to increase, there is both a pressing need and ripe opportunity for investigating analytical models that can predict application performance and guide programmers’ intuition when considering multi-OS environments. In this paper we present such a model to place bounds on application speedup, beginning with a simple, intuitive formulation, and progressing to a more refined model. We present an analysis of the model for a diverse set of benchmarks, as well as a prototype tool to project multi-OS speedups for applications on existing systems. Finally, we validate our model on state-of-the-art multi-OS systems, demonstrating that it reliably predicts speedup with 96\% average accuracy.}
 }
 
 @InProceedings{wanninger2022virtines,
     author = {Wanninger, Nicholas C. and Bowden, Joshua J. and Shetty, Kirtankumar and Garg, Ayush and Hale, Kyle C.},
     title = {Isolating Functions at the Hardware Limit with Virtines},
     year = {2022},
-    mont = {April},
+    month = {April},
     publisher = {Association for Computing Machinery},
     address = {New York, NY, USA},
     url = {https://doi.org/10.1145/3492321.3519553},
     doi = {10.1145/3492321.3519553},
-    booktitle = {Proceedings of the Seventeenth European Conference on Computer Systems},
+    booktitle = {Proceedings of the 17th European Conference on Computer Systems},
     pages = {644--662},
     numpages = {19},
     location = {Rennes, France},
@@ -423,21 +423,20 @@ series = {PLDI '21}
 }
 
 @inproceedings{ROMERO:2022:BOLT,
-author = {Romero, Eduardo and Stewart, Christopher and Li, Angela and Hale, Kyle and Morris, Nathaniel},
-title = {Bolt: Fast Inference for Random Forests},
-year = {2022},
-month = {October},
-isbn = {9781450393409},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3528535.3531519},
-doi = {10.1145/3528535.3531519},
-abstract = {Random forests use ensembles of decision trees to boost accuracy for machine learning tasks. However, large ensembles slow down inference on platforms that process each tree in an ensemble individually. We present Bolt, a platform that restructures whole random forests, not just individual trees, to speed up inference. Conceptually, Bolt maps every path in each tree to a lookup table which, if cache were large enough, would allow inference with just one memory access. When the size of the lookup table exceeds cache capacity, Bolt employs a novel combination of lossless compression, parameter selection, and bloom filters to shrink the table while preserving fast inference. We compared inference speed in Bolt to three state-of-the-art platforms: Python Scikit-Learn, Ranger, and Forest Packing. We evaluated these platforms using datasets with vision, natural language processing and categorical applications. We observed that on ensembles of shallow decision trees Bolt can run 2--14X faster than competing platforms and that Bolt's speedups persist as the number of decision trees in an ensemble increases.},
-booktitle = {Proceedings of the 23rd ACM/IFIP International Middleware Conference},
-pages = {94–106},
-numpages = {13},
-location = {Quebec, QC, Canada},
-series = {Middleware '22}
+    author = {Romero, Eduardo and Stewart, Christopher and Li, Angela and Hale, Kyle and Morris, Nathaniel},
+    title = {Bolt: Fast Inference for Random Forests},
+    year = {2022},
+    month = {October},
+    isbn = {9781450393409},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3528535.3531519},
+    doi = {10.1145/3528535.3531519},
+    booktitle = {Proceedings of the 23rd ACM/IFIP International Middleware Conference},
+    pages = {94–106},
+    numpages = {13},
+    location = {Quebec, QC, Canada},
+    series = {Middleware '22}
 }
 
 @inproceedings{TAURO:2024:TRACKFM,
@@ -445,11 +444,35 @@ series = {Middleware '22}
     title = {TrackFM: Far-out Compiler Support for a Far Memory World},
     year = {2024},
     month = {April},
-    booktitle = {Proceedings of the ACM International Conference on Architectural Support for Programming Languages and Operating Systems (to appear)},
+    booktitle = {Proceedings of the ACM International Conference on Architectural Support for Programming Languages and Operating Systems},
     location = {San Diego, CA, USA},
     series = {ASPLOS '24},
 }
 
+@inproceedings{YANG:2025:COPPAR,
+    author = {Yang, Xincheng and Hale, Kyle C.},
+    title = {CoPPar Tree: Fast and Composable Consistency at Global Scale},
+    year = {2025},
+    month = {July},
+    booktitle = {Proceedings of the 24th IEEE International Symposium on Parallel and Distributed Computing},
+    location = {Rennes, France},
+    series = {ISPDC '25},
+}
 
+@inproceedings{TAURO:2025:CARDS,
+    author = {Tauro, Brian R. and Dougherty, Ian and Hale, Kyle C.},
+    title = {CaRDS: Compiler-aided Remote Data Structures},
+    year = {2025},
+    month = {November},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3731599.3767488},
+    doi = {10.1145/3731599.3767488},
+    booktitle = {Proceedings of the SC '25 Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+    pages = {1117–1125},
+    location = {St. Louis, MO, USA},
+    abstract = {Far memory tiers improve memory utilization by enabling memory intensive applications to use idle memory from other machines over the network. Recently, compiler approaches to far memory have demonstrated how static analysis can be leveraged to automatically transform applications to make efficient use of remote memory tiers. However, policies in these compilers, e.g., the determination of whether objects should be remoted, prefetched, or evacuated are made conservatively at compile time or require profiling. While profiling can alleviate conservative policies, profile-guided systems can be expensive and may not work well for applications that have variation in their inputs. We propose CaRDS, system that combines both runtime and static analysis to determine far memory policies dynamically, at data structure granularity, and without profiling. CaRDS remoting policies can outperform prior automatic approaches by up to ∼ 2× and are within 25\% of profile-guided systems when the local memory is highly constrained.},
+    series = {SC Workshops '25},
+}
 
 
