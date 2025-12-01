@@ -26,6 +26,7 @@ abstract: Far memory tiers improve memory utilization by enabling memory intensi
   by up to ∼ 2× and are within 25% of profile-guided systems when the local memory
   is highly constrained.
 featured: false
+venue: MEMO '25
 publication: "*Proceedings of the SC '25 Workshops of the International Conference\
   \ for High Performance Computing, Networking, Storage and Analysis*"
 doi: 10.1145/3731599.3767488

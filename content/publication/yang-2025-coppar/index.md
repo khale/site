@@ -8,11 +8,12 @@ date: '2025-07-01'
 publishDate: '2025-11-21T20:01:16.315241Z'
 authors:
 - Xincheng Yang
-- Kyle C. Hale
+- admin
 publication_types:
 - '1'
 abstract: ''
 featured: false
+venue: ISPDC '25
 publication: '*Proceedings of the 24th IEEE International Symposium on Parallel and
   Distributed Computing*'
 ---
