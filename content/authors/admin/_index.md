@@ -80,6 +80,8 @@ highlight_name: true
 # OLD
 #**I am actively looking for new PhD students! Students interested in working with me
 #should see [this page]({{< ref "/recruiting" >}})**.
+#I received my PhD from [Northwestern University](https://northwestern.edu), where I worked with [Peter Dinda](http://pdinda.org).  Before that
+#I received my B.S. in computer science from UT Austin.
 ---
 
 I am an Associate Professor in the [School of Electrical Engineering and Computer
@@ -91,9 +93,6 @@ is the design of specialized system software stacks for parallel and
 emerging computing applications. I am a member of the [HiPCastor group](https://hipcastor-osu.github.io/hipcastor-site/) at OSU. You can see my publications [below](#pubs).
 
 I have been fortunate to receive the NSF CAREER award (2023-2028), as well as the IIT College of Computing's Excellence in Teaching and Excellence in Research awards. 
-
-I received my PhD from [Northwestern University](https://northwestern.edu), where I worked with [Peter Dinda](http://pdinda.org).  Before that
-I received my B.S. in computer science from UT Austin.
 
 **I am currently recruiting highly motivated PhD students to join our [HPC group](https://hipcastor-osu.github.io/hipcastor-site/) at Oregon State. Please see [here]({{< ref "/recruiting" >}}) for more info.**
 
