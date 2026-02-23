@@ -30,6 +30,7 @@ abstract: 'Leader-based consistency protocols often struggle with scalability du
   protocol that manages all sharded keyspaces as a unified system, integrating failure
   recovery and offering linearizable reads and writes.'
 featured: false
+venue: IPDPS '26
 publication: '*Proceedings of the 40th IEEE International Parallel and Distributed
   Processing Symposium*'
 ---
