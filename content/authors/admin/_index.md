@@ -22,6 +22,8 @@ organizations:
   url: "https://oregonstate.edu"
 - name: HExSA Lab
   url: "/lab"
+- name: HiPCastor Group
+  url: "https://hipcastor-osu.github.io/hipcastor-site/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Hale's research lies at the intersection of operating systems, HPC, parallel computing, computer architecture.
