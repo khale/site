@@ -19,3 +19,5 @@ public/
 
 # Test
 test/go.sum
+
+package-lock.json
