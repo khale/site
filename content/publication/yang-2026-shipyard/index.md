@@ -1,0 +1,36 @@
+---
+title: 'Shipyard: A Multi-Leader Consensus Protocol with Auto-Balanced Leadership
+  of the Sharded Keyspace'
+build:
+  render: never
+  list: never
+  publishResources: false
+date: '2026-05-01'
+publishDate: '2026-02-23T19:08:49.283549Z'
+authors:
+- Xincheng Yang
+- Kyle C. Hale
+publication_types:
+- '1'
+abstract: 'Leader-based consistency protocols often struggle with scalability due
+  to the centralization of client request ordering. The leader, responsible for ensuring
+  consistency by ordering reads and writes, becomes a bottleneck under high load,
+  limiting overall system performance. This limitation is exacerbated by the tight
+  coupling of consistency protocols with fault tolerance mechanisms, which further
+  strain the leader’s capacity. Keyspace sharding, a widely adopted technique in databases
+  and blockchain systems, helps mitigate this bottleneck by dis- tributing the workload.
+  However, it introduces two primary challenges: first, maintaining consistency across
+  shards, and second, balancing the workload between them. While several multi-leader
+  approaches have been proposed to address consistency issues, they often neglect
+  the crucial aspect of leadership balancing. Furthermore, these existing solutions
+  frequently fail to consider dynamic factors such as CPU utilization, request frequency,
+  and other performance metrics that significantly impact overall system efficiency.
+  To address these gaps, we propose Skiff, a variant of the Raft protocol that automatically
+  balances leadership for a single shard. Furthermore, we introduce Shipyard, a higher-level
+  protocol that manages all sharded keyspaces as a unified system, integrating failure
+  recovery and offering linearizable reads and writes.'
+featured: false
+publication: '*Proceedings of the 40th IEEE International Parallel and Distributed
+  Processing Symposium*'
+---
+
