@@ -16,5 +16,10 @@ featured: false
 venue: ISPDC '25
 publication: '*Proceedings of the 24th IEEE International Symposium on Parallel and
   Distributed Computing*'
+links:
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: "/papers/coppar-ispdc25.pdf"
 ---
 
