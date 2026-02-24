@@ -41,4 +41,21 @@ publication_types:
 abstract: ''
 publication: "*Proceedings of the 29th ACM International Conference on Architectural Support
   for Programming Languages and Operating Systems*"
+links:
+- name: DOI
+  icon_pack: ai
+  icon: doi
+  url: "https://doi.org/10.1145/3617232.3624856"
+- name: ACM
+  icon_pack: ai
+  icon: acmdl
+  url: "https://dl.acm.org/doi/10.1145/3617232.3624856"
+- name: Code
+  icon_pack: fab
+  icon: github
+  url: "https://github.com/compiler-disagg/TrackFM"
+- name: Reproducible Artifact
+  icon_pack: ai
+  icon: zenodo
+  url: "https://doi.org/10.5281/zenodo.10059217"
 ---
