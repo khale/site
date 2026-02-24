@@ -33,5 +33,9 @@ doi: 10.1145/3731599.3767488
 links:
 - name: URL
   url: https://doi.org/10.1145/3731599.3767488
+- name: PDF
+  icon_pack: fas
+  icon: file-pdf
+  url: "/papers/cards-memo25.pdf"
 ---
 
