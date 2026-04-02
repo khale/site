@@ -20,9 +20,14 @@ Much of our code is available on [GitHub{{<icon name="github" pack="fab">}}](htt
 
 ### Current PhD Students
 - [Nanda Velugoti](https://nanda.one)
-- [Xincheng Yang](https://www.linkedin.com/in/xincheng-yang-862519134/)
+- [Xincheng Yang](https://xyang76.github.io/about/)
+
+### Current MEng/MS Students
+- Eugene Cohen (MS)
+- Eddie Cheng (MEng)
 
 ### Undergraduates
+- Andrew Liang (HC)
 
 ### Publications
 
