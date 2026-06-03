@@ -22,7 +22,7 @@ Much of our code is available on [GitHub{{<icon name="github" pack="fab">}}](htt
 - [Nanda Velugoti](https://nanda.one)
 - [Xincheng Yang](https://xyang76.github.io/about/)
 
-### Current MEng/MS Students
+### Current Masters Students
 - Eugene Cohen (MS)
 - Eddie Cheng (MEng)
 
