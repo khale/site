@@ -16,6 +16,7 @@ comments: false  # Show comments?
 
 ## Technical Program Committees
 - EuroSys 2027
+- ASPLOS 2027 (ERC)
 - USENIX ATC 2023, 2025
 - HPDC 2024, 2026
 - SC 2018
