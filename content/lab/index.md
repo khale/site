@@ -24,10 +24,11 @@ Much of our code is available on [GitHub{{<icon name="github" pack="fab">}}](htt
 
 ### Current Masters Students
 - Eugene Cohen (MS)
-- Eddie Cheng (MEng)
 
 ### Undergraduates
 - Andrew Liang (HC)
+- B Gutierrez-Villanueva (REU)
+- Sang Nguyen (REU)
 
 ### Publications
 
@@ -65,6 +66,7 @@ See [here]({{< ref "/#pubs" >}}).
 - [Zachary McKee](https://www.linkedin.com/in/zacharyrmckee/)
 
 ### Graduate Students
+- Eddie Cheng (MEng)
 - [Conghao Liu](#)
 - [Ian Dougherty](https://www.idougherty.net/)
 - [MD Ali](https://www.linkedin.com/in/md-aliev/)
