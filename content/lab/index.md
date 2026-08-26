@@ -19,8 +19,10 @@ Much of our code is available on [GitHub{{<icon name="github" pack="fab">}}](htt
 - [Kyle C. Hale]({{< ref "/" >}})
 
 ### Current PhD Students
-- [Nanda Velugoti](https://nanda.one)
 - [Xincheng Yang](https://xyang76.github.io/about/)
+- [Nanda Velugoti](https://nanda.one)
+- [Plabon Dutta](https://www.linkedin.com/in/plabon-dutta-780895365/)
+- [Benjamin Christensen](#)
 
 ### Current Masters Students
 - Eugene Cohen (MS)
