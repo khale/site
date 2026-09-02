@@ -26,11 +26,12 @@ Much of our code is available on [GitHub{{<icon name="github" pack="fab">}}](htt
 
 ### Current Masters Students
 - Eugene Cohen (MS)
+- [Nathaniel Chappelle](https://chappelle.dev/) (MS)
 
 ### Undergraduates
-- Andrew Liang (HC)
 - B Gutierrez-Villanueva (REU)
 - Sang Nguyen (REU)
+- Jonas Carew (Capstone)
 
 ### Publications
 
@@ -47,6 +48,7 @@ See [here]({{< ref "/#pubs" >}}).
 - [Brian Tauro](https://www.btauro.com/), Ph.D. 2024 (first employment: Intuitive)
 
 ### Undergraduates
+- Andrew Liang (OSU Honors College)
 - [Jamison Kerney](https://jamiek.co/)
 - [Karl Hallsby](https://www.linkedin.com/in/karlhallsby/)
 - [Joshua Bowden](https://jbowden.me/)
