@@ -24,6 +24,7 @@ We are affiliated with the [School of EECS](https://engineering.oregonstate.edu/
 - [Xincheng Yang](https://xyang76.github.io/about/)
 - [Nanda Velugoti](https://nanda.one)
 - [Plabon Dutta](https://www.linkedin.com/in/plabon-dutta-780895365/)
+- Ben Christensen
 
 ### Current Masters Students
 - Eugene Cohen (MS)
