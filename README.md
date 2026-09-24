@@ -35,13 +35,37 @@ BibTeX and LaTeX ignore these, so the same `.bib` still works in papers.
 The DOI button comes from `doi`. Each paper gets `/publication/<key>/` (the key is lowercased
 and `:` becomes `-`), with the abstract and a clean `cite.bib` that has these extra fields removed.
 
-## Preview locally
+## Preview locally (Docker)
 
 ```sh
-python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt   # once
-python3 build.py serve          # http://localhost:8000. Rebuilds on save; refresh the page to see changes
-python3 build.py                # one-off build into ./public
+docker compose up --build        # first time; afterwards just `docker compose up`
+open http://localhost:8000       # rebuilds on save; refresh the browser to see changes
+docker compose down
 ```
+
+Other one-offs:
+
+```sh
+docker compose run --rm site build                   # production build into ./public
+docker compose run --rm site news "Paper accepted"   # add a news item dated today
+```
+
+Without Docker, the same commands work with plain Python:
+`pip install -r requirements.txt`, then `python3 build.py serve`.
+
+## Skins
+
+Set `skin:` in `site.yaml`. Each skin is one CSS file in `static/css/skins/` that overrides
+the color/font tokens and a few rules in `static/css/site.css`:
+
+- `paper`: Charter headings, warm white, blue links (no web fonts)
+- `terminal`: IBM Plex Sans/Mono, flat, green accent
+- `sidebar`: Inter, white, fixed left navigation on wide screens
+- `classic`: Source Serif, centered masthead, oxblood accent
+
+In the local preview there's a **skin** picker in the bottom-right corner (preview only; it
+isn't in the deployed site), or run `SKIN=classic docker compose up`. To make a new
+skin, copy one of the files and change the tokens.
 
 ## Deploy
 
@@ -57,7 +81,8 @@ pubs.bib            publications
 data/               news.yaml, teaching.yaml, lab.yaml
 pages/              markdown pages -> /<name>/
 templates/          Jinja2 HTML templates
-static/             copied as-is (css/, img/, papers/, cv.pdf, ...)
+static/             copied as-is (css/, css/skins/, fonts/, img/, papers/, cv.pdf, ...)
+Dockerfile, compose.yaml   local preview
 ```
 
 The lab page (`templates/lab.html`, `static/css/lab.css`, `data/lab.yaml`, `pages/lab.md`)

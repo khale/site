@@ -1,0 +1,19 @@
+# Local preview of the site.
+#
+#   docker compose up --build        # first run (then just: docker compose up)
+#   open http://localhost:8000       # rebuilds on save; refresh the browser to see changes
+#
+#   SKIN=classic docker compose up   # preview another skin (or use the picker, bottom-right)
+#   docker compose run --rm site build                  # one-off production build into ./public
+#   docker compose run --rm site news "Paper accepted"  # add a news item dated today
+#   docker compose down
+services:
+  site:
+    build: .
+    image: halek-site:latest
+    ports:
+      - "127.0.0.1:8000:8000"   # reachable only from this Mac
+    environment:
+      - SKIN=${SKIN:-}
+    volumes:
+      - .:/site

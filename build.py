@@ -4,6 +4,7 @@ Static site builder for halek.co.
 
     python3 build.py              build the site into ./public
     python3 build.py serve        build, serve on http://localhost:8000, rebuild on change
+                                  (HOST / PORT env vars override; SKIN=name previews a skin)
     python3 build.py news "text"  add a news item dated today to data/news.yaml
 
 Inputs (all plain text, no front-matter boilerplate):
@@ -247,9 +248,16 @@ def as_date(d):
 
 # -------------------------------------------------------------- build ------
 
+DEV = False   # set by `serve`: adds the skin switcher
+
+
 def build():
     t0 = time.time()
     site = yaml.safe_load((ROOT / "site.yaml").read_text(encoding="utf-8"))
+    site["skin"] = os.environ.get("SKIN") or site.get("skin", "paper")
+    skins = sorted(p.stem for p in (ROOT / "static/css/skins").glob("*.css"))
+    if site["skin"] not in skins:
+        sys.exit(f"unknown skin {site['skin']!r}; available: {', '.join(skins)}")
     pubs = load_pubs(site.get("highlight_names", []))
 
     news = []
@@ -261,7 +269,7 @@ def build():
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(ROOT / "templates"),
                              autoescape=jinja2.select_autoescape(["html"]),
                              trim_blocks=True, lstrip_blocks=True)
-    env.globals.update(site=site, now=dt.date.today())
+    env.globals.update(site=site, now=dt.date.today(), dev=DEV, skins=skins)
 
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -294,7 +302,7 @@ def build():
         page={"title": "Page not found", "content": '<p>Try the <a href="/">home page</a>.</p>'}),
         encoding="utf-8")
 
-    print(f"built {len(pubs)} pubs, {len(news)} news items, {len(pages)} pages "
+    print(f"built {len(pubs)} pubs, {len(news)} news items, {len(pages)} pages, skin '{site['skin']}' "
           f"in {time.time() - t0:.2f}s -> {OUT.relative_to(ROOT)}/")
 
 # -------------------------------------------------------------- serve ------
@@ -306,10 +314,20 @@ def snapshot():
     return {p: p.stat().st_mtime for p in watch if p.exists()}
 
 
+class QuietHandler(http.server.SimpleHTTPRequestHandler):
+    def __init__(self, *a, **k):
+        super().__init__(*a, directory=str(OUT), **k)
+
+    def log_message(self, *a):
+        pass
+
+
 def serve(port=8000):
+    global DEV
+    DEV = True
     build()
-    handler = lambda *a, **k: http.server.SimpleHTTPRequestHandler(*a, directory=str(OUT), **k)
-    httpd = http.server.ThreadingHTTPServer(("127.0.0.1", port), handler)
+    host = os.environ.get("HOST", "127.0.0.1")
+    httpd = http.server.ThreadingHTTPServer((host, port), QuietHandler)
     threading.Thread(target=httpd.serve_forever, daemon=True).start()
     print(f"serving http://localhost:{port}/  (Ctrl-C to stop; rebuilds on save, refresh to see)")
     last = snapshot()
@@ -345,7 +363,7 @@ if __name__ == "__main__":
     if cmd == "build":
         build()
     elif cmd == "serve":
-        serve(int(sys.argv[2]) if len(sys.argv) > 2 else 8000)
+        serve(int(sys.argv[2]) if len(sys.argv) > 2 else int(os.environ.get("PORT", 8000)))
     elif cmd == "news" and len(sys.argv) > 2:
         add_news(" ".join(sys.argv[2:]))
     else:

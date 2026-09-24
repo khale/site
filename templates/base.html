@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-skin="{{ site.skin }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +8,7 @@
 <link rel="canonical" href="{{ site.url }}{{ url }}">
 <link rel="icon" href="/favicon.png">
 <link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/skins/{{ site.skin }}.css" id="skin-css">
 {% block head %}{% endblock %}
 </head>
 <body class="{% block bodyclass %}{% endblock %}">
@@ -29,5 +30,31 @@
     © {{ now.year }} {{ site.name }} · <a href="{{ site.affiliation.url }}">{{ site.affiliation.name }}</a> · <a href="mailto:{{ site.email }}">{{ site.email }}</a>
   </div>
 </footer>
+{% if dev %}
+{# Preview-only skin picker (python3 build.py serve). Not in the deployed site. #}
+<div class="skin-picker">
+  <label>skin <select id="skin-select">{% for s in skins %}<option{% if s == site.skin %} selected{% endif %}>{{ s }}</option>{% endfor %}</select></label>
+</div>
+<style>
+.skin-picker { position: fixed; right: 12px; bottom: 12px; z-index: 99; font: 12px/1 ui-monospace, Menlo, monospace;
+  background: #111; color: #eee; padding: 6px 8px; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,.3); }
+.skin-picker select { font: inherit; margin-left: 4px; }
+</style>
+<script>
+(function () {
+  var sel = document.getElementById('skin-select'), link = document.getElementById('skin-css');
+  function apply(name) {
+    link.href = '/css/skins/' + name + '.css';
+    document.documentElement.dataset.skin = name;
+    sel.value = name;
+    try { localStorage.setItem('skin', name); } catch (e) {}
+  }
+  var q = new URLSearchParams(location.search).get('skin'), saved = null;
+  try { saved = localStorage.getItem('skin'); } catch (e) {}
+  if (q || saved) apply(q || saved);
+  sel.addEventListener('change', function () { apply(sel.value); });
+})();
+</script>
+{% endif %}
 </body>
 </html>

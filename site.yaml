@@ -1,4 +1,7 @@
 # Site-wide settings.
+
+# Look: paper | terminal | sidebar | classic   (files in static/css/skins/)
+skin: paper
 name: Kyle C. Hale
 url: https://halek.co
 description: Kyle C. Hale, Associate Professor of Computer Science at Oregon State University. Operating systems, HPC, and computer architecture.

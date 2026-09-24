@@ -1,0 +1,46 @@
+/* Skin: terminal. IBM Plex Sans + Plex Mono; flat, high-contrast, a nod to systems work. */
+@font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans/ibm-plex-sans-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("/fonts/ibm-plex-sans/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); font-weight: 600 700; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("/fonts/ibm-plex-mono/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("/fonts/ibm-plex-mono/ibm-plex-mono-latin-600-normal.woff2") format("woff2"); font-weight: 600 700; font-display: swap; }
+
+:root {
+  --bg: #f6f6f3; --fg: #121212; --muted: #5b5e62; --rule: #d6d6d0;
+  --link: #0b6b4d; --link-hover: #054531; --code-bg: #ecece7;
+  --venue-bg: #121212; --venue-bd: #121212; --venue-fg: #f6f6f3;
+  --award-bg: #ffe066; --award-bd: #ffe066; --award-fg: #231d00;
+  --ugrad-bg: #dcc2ff; --ugrad-bd: #dcc2ff; --ugrad-fg: #230a40;
+  --serif: "IBM Plex Sans", var(--sans);
+  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e100f; --fg: #d9ddd7; --muted: #8a908a; --rule: #262a27;
+    --link: #62d39c; --link-hover: #9ae8bf; --code-bg: #171a18;
+    --venue-bg: #d9ddd7; --venue-bd: #d9ddd7; --venue-fg: #0e100f;
+    --award-bg: #e8c547; --award-bd: #e8c547; --award-fg: #1a1500;
+    --ugrad-bg: #bf9cf0; --ugrad-bd: #bf9cf0; --ugrad-fg: #1b0833;
+  }
+}
+.site-name, .site-header nav, .section-title, .year, .news-item time, .btn, .profile-links a, .copy { font-family: var(--mono); }
+.site-name { font-size: 1.05rem; font-weight: 600; letter-spacing: -.01em; }
+.site-name::before { content: "~/"; color: var(--link); }
+.site-header nav { font-size: .85rem; text-transform: lowercase; }
+.site-header nav a[aria-current] { color: var(--link); text-decoration: none; }
+.site-header nav a[aria-current]::before { content: "▸ "; }
+h1, .page-title, .intro h1 { font-weight: 600; letter-spacing: -.02em; }
+.section-title { font-size: 1rem; font-weight: 600; border-bottom: 2px solid var(--fg); }
+.section-title::before { content: "## "; color: var(--muted); }
+.section-title .more { font-family: var(--mono); }
+.year { font-size: .95rem; color: var(--fg); border-bottom: 1px dashed var(--rule); }
+.pill { border-radius: 2px; box-shadow: none; font-family: var(--mono); font-weight: 600; }
+.pill-venue { box-shadow: none; }
+.btn { border-radius: 2px; font-size: .74rem; }
+.btn::before { content: "["; color: var(--rule); } .btn::after { content: "]"; color: var(--rule); }
+.btn { border: 0; padding: 0; }
+.profile-links a { border-radius: 2px; font-size: .8rem; }
+.portrait { border-radius: 2px; filter: grayscale(1) contrast(1.05); transition: filter .3s; }
+.portrait:hover { filter: none; }
+.news-item + .news-item, .course + .course { border-top-style: dotted; }
