@@ -1,5 +1,6 @@
 ---
 title: HExSA Lab @ Oregon State
+layout: hexsa  # custom layout: no page title, the banner is the heading
 
 reading_time: false  # Show estimated reading time?
 share: false  # Show social sharing links?
@@ -9,7 +10,7 @@ comments: false  # Show comments?
 
 ---
 
-# Laboratory for **H**igh-performance **Ex**perimental **S**ystems and **A**rchitecture
+{{< hexsa-hero >}}
 
 We are interested in the design of systems software for high-performance and parallel computing. As we see hardware scale up--both in terms of the number of interconnected machines and in terms of the number of computing elements on a single chip--We believe it is time to reconsider some of the design decisions that have sustained the popularity of the Linux/x86 software stack for general-purpose computing. Particularly, how should we organize/structure systems software stacks for future massive-scale machines?
 

@@ -21,3 +21,6 @@ public/
 test/go.sum
 
 package-lock.json
+
+# Claude
+Claude*

@@ -1,0 +1,15 @@
+{{- /*
+  HExSA lab hero banner.
+  Usage (in content/lab/index.md):
+    {{< hexsa-hero >}}
+  Styles live in assets/scss/custom.scss under "HExSA lab hero".
+*/ -}}
+<section class="hexsa-hero" aria-labelledby="hexsa-hero-title">
+  <img class="hexsa-hero__graphic" src="{{ "img/hexsa/hexsa-supergraphic-on-dark.svg" | relURL }}" alt="" aria-hidden="true">
+  <div class="hexsa-hero__body">
+    <h1 id="hexsa-hero-title" class="hexsa-hero__logo">
+      <img src="{{ "img/hexsa/hexsa-compact-color-dark.svg" | relURL }}" alt="HExSA" width="258" height="72">
+    </h1>
+    <p class="hexsa-hero__name">Laboratory for <b>H</b>igh-performance <b>Ex</b>perimental <b>S</b>ystems and <b>A</b>rchitecture</p>
+  </div>
+</section>
