@@ -1,0 +1,4 @@
+# Only three libraries, all long-stable. Ranges avoid surprise major-version breaks.
+Jinja2>=3.0,<4
+Markdown>=3.4,<4
+PyYAML>=6.0,<7

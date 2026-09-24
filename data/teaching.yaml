@@ -1,0 +1,45 @@
+# Courses, grouped by institution. Add a term by adding one line.
+# A term can be plain text ("Fall '24") or have a link:
+#   - {term: "Spring '21", url: "https://..."}
+
+- institution: Oregon State University
+  courses:
+    - code: CS/ECE 4/599
+      title: Modern Memory Systems
+      terms: ["Winter '26"]
+    - code: CS/ECE 472
+      title: Computer Architecture
+      terms: ["Fall '24"]
+
+- institution: Illinois Institute of Technology
+  courses:
+    - code: CS 562
+      title: Virtual Machines
+      terms: ["Spring '24", "Spring '22", "Fall '19", "Fall '18", "Fall '17"]
+    - code: CSP 544
+      title: System and Network Security
+      terms: ["Fall '23", "Spring '22", "Spring '20"]
+    - code: CS 595
+      title: Advanced Topics in Serverless and Edge Computing
+      terms: ["Spring '23", "Fall '21"]
+    - code: CS 450
+      title: Operating Systems
+      terms: ["Fall '22", "Fall '20", "Spring '19"]
+    - code: CS 492
+      title: Introduction to CS Research
+      terms: ["Fall '22"]
+    - code: CS 350
+      title: Computer Organization and Assembly Language Programming
+      terms:
+        - {term: "Spring '21", url: "https://hale-legacy.com/class/cs350/s21/"}
+        - "Spring '18"
+        - "Fall '16"
+    - code: CS 695
+      title: Doctoral Seminar
+      terms:
+        - {term: "Spring '20", url: "https://www.hale-legacy.com/class/cs695/s20/"}
+        - "Spring '17"
+    - code: CS 595-03
+      title: OS and Runtime Design for Supercomputing
+      terms:
+        - {term: "Fall '16", url: "https://www.hale-legacy.com/class/cs59503/f16/"}

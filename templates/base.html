@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+<meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+<link rel="canonical" href="{{ site.url }}{{ url }}">
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="/css/site.css">
+{% block head %}{% endblock %}
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="/">{{ site.name }}</a>
+    <nav aria-label="Main">
+      {% for item in site.nav %}
+      <a href="{{ item.url }}"{% if url != '/' and url.startswith(item.url) %} aria-current="page"{% endif %}>{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% block main %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    © {{ now.year }} {{ site.name }} · <a href="{{ site.affiliation.url }}">{{ site.affiliation.name }}</a> · <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </div>
+</footer>
+</body>
+</html>

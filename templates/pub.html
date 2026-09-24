@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% from "_macros.html" import authors, badges, tags, links %}
+{% block description %}{{ pub.title }}. {{ pub.venue }}.{% endblock %}
+{% block head %}
+<meta name="citation_title" content="{{ pub.title }}">
+{% for a in pub.authors %}<meta name="citation_author" content="{{ a.name }}">
+{% endfor %}<meta name="citation_publication_date" content="{{ pub.year }}">
+{% for l in pub.links if l.label == 'PDF' %}<meta name="citation_pdf_url" content="{{ l.url }}">{% endfor %}
+{% endblock %}
+{% block main %}
+<article class="pub-detail">
+  <p><span class="pill pill-venue">{{ pub.venue }}</span>{{ badges(pub) }}</p>
+  <h1 class="page-title">{{ pub.title }}</h1>
+  <p class="pub-authors">{{ authors(pub) }}</p>
+  <p class="pub-where">{% if pub.where %}<em>{{ pub.where }}</em>, {% endif %}{{ pub.date_str }}.</p>
+  {{ tags(pub) }}
+  {{ links(pub, bibtex=false) }}
+  {% if pub.abstract %}
+  <h2>Abstract</h2>
+  <p class="abstract">{{ pub.abstract }}</p>
+  {% endif %}
+  <h2>BibTeX <button class="copy" type="button" data-copy="bibtex">Copy</button></h2>
+  <pre id="bibtex" class="bibtex">{{ pub.bibtex }}</pre>
+  <p><a href="/publication/">← All publications</a></p>
+</article>
+<script>
+document.querySelector('[data-copy]').addEventListener('click', function (e) {
+  navigator.clipboard.writeText(document.getElementById('bibtex').textContent)
+    .then(function () { e.target.textContent = 'Copied'; setTimeout(function () { e.target.textContent = 'Copy'; }, 1500); });
+});
+</script>
+{% endblock %}

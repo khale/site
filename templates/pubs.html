@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pub %}
+{% block main %}
+<h1 class="page-title">Publications</h1>
+<p class="lede">Also on <a href="https://scholar.google.com/citations?user=zYAOJqwAAAAJ&hl=en">Google Scholar</a> and the <a href="https://dl.acm.org/profile/81548021280">ACM Digital Library</a>.</p>
+{% for year, group in pubs | groupby("year") | reverse %}
+<section class="year-group">
+  <h2 class="year" id="y{{ year }}">{{ year }}</h2>
+  {% for p in group %}{{ pub(p) }}{% endfor %}
+</section>
+{% endfor %}
+{% endblock %}

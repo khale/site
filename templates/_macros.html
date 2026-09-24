@@ -1,0 +1,57 @@
+{% macro authors(p) -%}
+{% for a in p.authors %}{% if a.me %}<strong>{{ a.name }}</strong>{% else %}{{ a.name }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}
+{%- endmacro %}
+
+{% macro badges(p) -%}
+{% for b in p.badges %}<a class="acm-badge" href="https://www.acm.org/publications/policies/artifact-review-and-badging-current#{{ b.id }}" title="ACM badge: {{ b.label }}"><img src="/img/acm/{{ b.id }}.png" alt="ACM badge: {{ b.label }}" width="20" height="20"></a>{% endfor %}
+{%- endmacro %}
+
+{% macro tags(p) -%}
+{% if p.award or p.ugrad %}
+<div class="pub-tags">
+  {% if p.award %}<span class="pill pill-award">{{ p.award }}</span>{% endif %}
+  {% if p.ugrad %}<span class="pill pill-ugrad">Undergraduate Research</span>{% endif %}
+</div>
+{% endif %}
+{%- endmacro %}
+
+{% macro links(p, bibtex=true) -%}
+<div class="pub-links">
+  {% for l in p.links %}<a class="btn" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+  {% if bibtex %}<a class="btn" href="/publication/{{ p.slug }}/cite.bib">BibTeX</a>{% endif %}
+</div>
+{%- endmacro %}
+
+{# Full entry: used on /publication/ #}
+{% macro pub(p) -%}
+<article class="pub" id="{{ p.slug }}">
+  <div class="gutter"><span class="pill pill-venue">{{ p.venue }}</span></div>
+  <div class="pub-body">
+    <a class="pub-title" href="/publication/{{ p.slug }}/">{{ p.title }}</a>{{ badges(p) }}
+    <div class="pub-authors">{{ authors(p) }}</div>
+    <div class="pub-where">{% if p.where %}<em>{{ p.where }}</em>, {% endif %}{{ p.date_str }}.</div>
+    {{ tags(p) }}
+    {{ links(p) }}
+  </div>
+</article>
+{%- endmacro %}
+
+{# Compact entry: used on the home page #}
+{% macro pub_compact(p) -%}
+<article class="pub pub-compact">
+  <div class="gutter"><span class="pill pill-venue">{{ p.venue }}</span></div>
+  <div class="pub-body">
+    <a class="pub-title" href="/publication/{{ p.slug }}/">{{ p.title }}</a>{{ badges(p) }}
+    <div class="pub-authors">{{ authors(p) }}</div>
+    {{ tags(p) }}
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro news_item(n) -%}
+<li class="news-item"><time class="gutter" datetime="{{ n.date }}">{{ n.date_str }}</time><div>{{ n.html | safe }}</div></li>
+{%- endmacro %}
+
+{% macro person(p) -%}
+{% if p is string %}{{ p }}{% else %}{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}{% if p.note %} <span class="note">({{ p.note }})</span>{% endif %}{% endif %}
+{%- endmacro %}

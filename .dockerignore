@@ -1,2 +1,0 @@
-# The image doesn't copy the site in (compose bind-mounts it), so send no build context.
-*

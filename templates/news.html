@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% from "_macros.html" import news_item %}
+{% block main %}
+<h1 class="page-title">News</h1>
+<ul class="news-list">
+  {% for n in news %}{{ news_item(n) }}{% endfor %}
+</ul>
+{% endblock %}

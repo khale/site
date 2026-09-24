@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "_macros.html" import person %}
+{% block bodyclass %}lab{% endblock %}
+{% block head %}<link rel="stylesheet" href="/css/lab.css">{% endblock %}
+{% block description %}HExSA Lab at Oregon State University: high-performance experimental systems and architecture.{% endblock %}
+{% block main %}
+<section class="hexsa-hero" aria-labelledby="hexsa-hero-title">
+  <img class="hexsa-hero__graphic" src="/img/hexsa/hexsa-supergraphic-on-dark.svg" alt="" aria-hidden="true">
+  <div class="hexsa-hero__body">
+    <h1 id="hexsa-hero-title" class="hexsa-hero__logo">
+      <img src="/img/hexsa/hexsa-compact-color-dark.svg" alt="HExSA" width="258" height="72">
+    </h1>
+    <p class="hexsa-hero__name">Laboratory for <b>H</b>igh-performance <b>Ex</b>perimental <b>S</b>ystems and <b>A</b>rchitecture</p>
+  </div>
+</section>
+
+<div class="prose">{{ page.content | safe }}</div>
+
+<h2 class="lab-heading">People</h2>
+<div class="roster">
+{% for g in lab.current %}
+  <section>
+    <h3>{{ g.group }}</h3>
+    <ul>{% for p in g.people %}<li>{{ person(p) }}</li>{% endfor %}</ul>
+  </section>
+{% endfor %}
+</div>
+
+<h2 class="lab-heading">Publications</h2>
+<p>See the <a href="/publication/">full publication list</a>.</p>
+
+<h2 class="lab-heading">Alumni</h2>
+<div class="roster roster-alumni">
+{% for g in lab.alumni %}
+  <section>
+    <h3>{{ g.group }}</h3>
+    <ul>{% for p in g.people %}<li>{{ person(p) }}</li>{% endfor %}</ul>
+  </section>
+{% endfor %}
+</div>
+{% endblock %}

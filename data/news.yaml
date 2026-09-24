@@ -1,0 +1,72 @@
+# News items, newest first (order doesn't actually matter; the site sorts by date).
+#
+#   - date: 2026-09-24          # YYYY-MM-DD, or just YYYY-MM
+#     text: One line of Markdown. Links like [this](https://...) work.
+#
+# Shortcut:  python3 build.py news "Paper accepted to ..."   (adds one dated today)
+
+- date: 2026-07-06
+  text: Nanda's paper describing MemPower, a new modeling and analysis framework for software-directed DVFS was accepted to IEEE Cluster 2026! Congrats Nanda!
+
+- date: 2026-02-23
+  text: Xincheng's paper on load-balanced consensus for sharded deployments has been accepted to IPDPS '26. Congrats Xin!
+
+- date: 2023-11-01
+  text: Jamie won third place in the ACM student research competition at the Supercomputing '23 conference. His work focuses on Python Unikernels for HPC. Congrats Jamie!
+
+- date: 2023-08-30
+  text: Brian's paper on using compilers to automatically transform applications to use disaggregated memory has been accepted to [ASPLOS '24](https://www.asplos-conference.org/asplos2024/). Congratulations Brian on this well-deserved achievement and thanks to our wonderful collaborators at Northwestern University!
+
+- date: 2023-08-08
+  text: A team of three IIT faculty ([Rujia Wang](https://rujiawang.github.io/), Kyle Hale, and [Xian-He Sun](http://www.cs.iit.edu/~scs/sun/)) and a collaborator at the University of Iowa, [Peng Jiang](https://homepage.divms.uiowa.edu/~penjiang/) won a $1M award from NSF to investigate novel architectures for next-generation systems integrating near-data processing. Congrats all and thanks to NSF!
+
+- date: 2023-03-10
+  text: Thanks to tons of hard work from HExSA Lab members, I am incredibly honored to have been awarded the NSF CAREER grant! Many thanks to NSF, to all my collaborators, mentors, colleagues, and most of all to my wonderful students! I am thrilled to be able to continue our exciting research on novel virtualization technology and system software for secure and efficient cloud computing.
+
+- date: 2022-04-06
+  text: Our Virtines paper won the Distinguished Artifact Award at EuroSys '22. Great work everyone! The code is available [here](https://github.com/virtines).
+
+- date: 2022-01-18
+  text: After an amazing push and a great deal of hard work, our paper on Virtines was accepted to [EuroSys '22](https://2022.eurosys.org/)! Congratulations go to Nick Wanninger and Josh Bowden!
+
+- date: 2021-09-17
+  text: Our work on modeling speed-up in multi-kernel environments has been accepted to appear in TPDS! Congratulations to Brian and Conghao on the hard work, and in particular to Brian for the journal paper push.
+
+- date: 2021-09-10
+  text: Several papers involving collaborators from The Ohio State University, Northwestern, and IIT have been published at [PDADS '21](https://www.csm.ornl.gov/workshops/PDADS/program.html), [APSys '21](https://i.cs.hku.hk/apsys2021/), [ROSS '21](https://www.mcs.anl.gov/events/workshops/ross/2021/), and [DaMoN '21](https://sites.google.com/view/damon2021/), congrats to all the authors and collaborators on the hard work!
+
+- date: 2021-08-27
+  text: Our work on bringing OpenMP implementations into the kernel has been accepted to [SC '21](https://sc21.supercomputing.org/)! Congratulations to everyone involved on the successful collaborative effort!
+
+- date: 2021-04-07
+  text: Our paper, which was a collaboration with Mike Rainey and Umut Acar at CMU, Ryan Newton at Facebook, Nikos Hardavellas, Simone Campanoni, and Peter Dinda was accepted to PLDI '21! Among other things, this work leverages the Nautilus kernel to achieve uncompromising parallelism.
+
+- date: 2021-02-15
+  text: Nick won the College of Computing 2020 Excellence in Undergraduate Research Award. Congratulations Nick!
+
+- date: 2021-02-15
+  text: Kyle is honored to have won the College of Computing's Excellence in Teaching award for the 2020 academic year!
+
+- date: 2020-08-24
+  text: A team of three IIT faculty ([Rujia Wang](https://rujiawang.github.io/), Kyle Hale, and [Xian-He Sun](http://www.cs.iit.edu/~scs/sun/)) and a collaborator at the University of Iowa, [Peng Jiang](https://homepage.divms.uiowa.edu/~penjiang/) won an award from NSF to investigate novel architectures for next-generation systems integrating near-data processing. Congrats all and thanks to NSF!
+
+- date: 2020-08-20
+  text: Happy to announce that we received an NSF planning award from the Principles and Practices of Scalable Systems (PPoSS) program solicitation! This is a collaborative grant with Simone Campanoni, Peter Dinda, and Nikos Hardavellas from Northwestern University, and Mike Rainey and Umut Acar from Carnegie Mellon University. Thank you NSF!
+
+- date: 2020-04-20
+  text: A student team from Hale and Jin's System and Network Security course ([CSP 544](/teaching/)) competed in the National Cyber League [Capture the Flag](https://cyberskyline.com/events/ncl) competition. They placed 2nd in their bracket; congratulations all!
+
+- date: 2020-04-11
+  text: Kyle is happy to serve on the technical program committee for the 15th Workshop on Virtualization in High-Performance Cloud Computing (VHPC '20). Those interested should [submit a paper](https://vhpc.org/)! The workshop is free to attend via Zoom due to the current COVID-19 situation.
+
+- date: 2020-04-11
+  text: Iris and Hussain are going to graduate school! Iris will be working with [Natalie Enright Jerger's](http://www.eecg.toronto.edu/~enright/) architecture group at the [University of Toronto](https://www.utoronto.ca/). Hussain will be working in the Compilers group at [Northwestern University](https://northwestern.edu) with [Simone Campanoni](https://users.cs.northwestern.edu/~simonec/). Congratulations to both of you and good luck!
+
+- date: 2020-04-11
+  text: Brian accepted an offer to intern at VMware Research with [Josh Simons](https://octo.vmware.com/author/josh_simons/) during the Summer of 2020. He'll be working on HPC virtualization. Congrats Brian!
+
+- date: 2020-03-15
+  text: Kyle presented ongoing work in the HExSA Lab at the 2019 [NSF CSR/NeTS PI meeting](https://www.cs.umd.edu/nsf2019).
+
+- date: 2019-11-08
+  text: Brian presented his paper, *[Modeling Speedup for Multi-OS Environments](/publication/tauro-2019-speedup/)* at the 27th IEEE International Symposium on the Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS '19). Congrats Brian!

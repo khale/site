@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block main %}
+<h1 class="page-title">Teaching</h1>
+{% for inst in teaching %}
+<section>
+  <h2 class="section-title">{{ inst.institution }}</h2>
+  <ul class="courses">
+    {% for c in inst.courses %}
+    <li class="course">
+      <span class="gutter course-code">{{ c.code }}</span>
+      <div>
+        <span class="course-title">{% if c.url %}<a href="{{ c.url }}">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}</span>
+        <span class="terms">{% for t in c.terms %}{% if t is mapping %}<a href="{{ t.url }}">{{ t.term }}</a>{% else %}{{ t }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+{% endblock %}

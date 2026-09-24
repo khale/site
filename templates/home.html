@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "_macros.html" import pub_compact, news_item %}
+{% block bodyclass %}home{% endblock %}
+{% block main %}
+<section class="intro">
+  <img class="portrait" src="/img/portrait.jpg" alt="Photo of {{ site.name }}" width="180" height="190">
+  <div>
+    <h1>{{ site.name }}</h1>
+    <p class="role">{{ site.role }}<br><a href="{{ site.affiliation.url }}">{{ site.affiliation.name }}</a></p>
+    <ul class="profile-links">
+      {% for l in site.links %}<li><a href="{{ l.url }}">{{ l.name }}</a></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="bio prose">
+{{ page.content | safe }}
+</section>
+
+<section>
+  <h2 class="section-title">News <a class="more" href="/news/">All news →</a></h2>
+  <ul class="news-list">
+    {% for n in news %}{{ news_item(n) }}{% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2 class="section-title">Recent publications <a class="more" href="/publication/">All publications →</a></h2>
+  {% for p in pubs %}{{ pub_compact(p) }}{% endfor %}
+</section>
+{% endblock %}

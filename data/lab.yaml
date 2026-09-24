@@ -1,0 +1,67 @@
+# HExSA lab roster. A person is either a plain name or {name, url, note}.
+# To move someone to alumni, cut their line and paste it under alumni.
+
+current:
+  - group: Faculty
+    people:
+      - {name: Kyle C. Hale, url: "/"}
+  - group: PhD Students
+    people:
+      - {name: Xincheng Yang, url: "https://xyang76.github.io/about/"}
+      - {name: Nanda Velugoti, url: "https://nanda.one"}
+      - {name: Plabon Dutta, url: "https://www.linkedin.com/in/plabon-dutta-780895365/"}
+      - Ben Christensen
+  - group: Masters Students
+    people:
+      - Eugene Cohen
+      - {name: Nathaniel Chappelle, url: "https://chappelle.dev/"}
+  - group: Undergraduates
+    people:
+      - {name: B Gutierrez-Villanueva, note: REU}
+      - {name: Sang Nguyen, note: REU}
+      - {name: Jonas Carew, note: Capstone}
+
+alumni:
+  - group: Ph.D. Graduates
+    people:
+      - {name: Brian Tauro, url: "https://www.btauro.com/", note: "Ph.D. 2024, first employment: Intuitive"}
+  - group: Graduate Students
+    people:
+      - {name: Eddie Cheng, note: MEng}
+      - Conghao Liu
+      - {name: Ian Dougherty, url: "https://www.idougherty.net/"}
+      - {name: MD Ali, url: "https://www.linkedin.com/in/md-aliev/"}
+      - {name: Kirtankumar Shetty, url: "https://www.linkedin.com/in/kirtankshetty/"}
+      - {name: Ayush Garg, url: "https://www.linkedin.com/in/sblayush/"}
+      - Amal Rizvi
+      - Ganesh Mahesh
+      - {name: Goutham Kannan, url: "https://www.linkedin.com/in/gouthamkannan/"}
+      - {name: Imran Ali Usmani, url: "https://www.linkedin.com/in/imran-ali-usmani/"}
+      - {name: Florentin Bekier, url: "https://www.florentin.tech/"}
+      - {name: Gyucheon Heo, url: "https://www.linkedin.com/in/gyucheon-heo-07a007157/"}
+      - Josue Nieves
+      - {name: Nithin Rao, url: "https://www.linkedin.com/in/nithin-rao/"}
+      - {name: Piyush Nath, url: "https://www.linkedin.com/in/piyush-nath-a1899035/"}
+      - {name: Suraj Chafle, url: "https://www.linkedin.com/in/surajchafle/"}
+  - group: Undergraduates
+    people:
+      - {name: Andrew Liang, note: OSU Honors College}
+      - Jamison Kerney
+      - {name: Karl Hallsby, url: "https://raven.hallsby.com/"}
+      - Joshua Bowden
+      - {name: Nick Wanninger, url: "https://nickw.io/"}
+      - {name: Hussain Khajanchi, url: "https://www.linkedin.com/in/hussainkhajanchi/"}
+      - {name: Iris Uwizeyimana, url: "https://www.linkedin.com/in/irisuwizeyimana/"}
+      - {name: Trevor Pritchett, url: "https://www.linkedin.com/in/trevor-pritchett-230174187/"}
+      - {name: Devyn Keeney, url: "https://www.linkedin.com/in/devyn-keeney/"}
+      - Cooper Van Kampen
+      - {name: Justin Goodman, url: "https://justgood.dev/"}
+      - {name: Sam Grayson, url: "https://samgrayson.me/"}
+      - {name: Akhil Kodumuri, url: "https://www.linkedin.com/in/akhil-kodumuri-9b0901168/"}
+      - Alexandra Suarez
+      - Isabel Raymundo
+      - Jagruti Depan
+      - Josue Nieves
+      - {name: Justin Orr, url: "https://www.linkedin.com/in/justin-orr/"}
+      - {name: Lucas Myers, url: "https://www.linkedin.com/in/lcmylin/"}
+      - {name: Zachary McKee, url: "https://www.linkedin.com/in/zacharyrmckee/"}

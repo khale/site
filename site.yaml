@@ -1,0 +1,30 @@
+# Site-wide settings.
+name: Kyle C. Hale
+url: https://halek.co
+description: Kyle C. Hale, Associate Professor of Computer Science at Oregon State University. Operating systems, HPC, and computer architecture.
+role: Associate Professor of Computer Science
+affiliation: {name: Oregon State University, url: "https://engineering.oregonstate.edu/EECS"}
+email: kyle.hale@oregonstate.edu
+
+# Names bolded in author lists.
+highlight_names: ["Kyle C. Hale", "Kyle Hale"]
+
+# How many items the home page shows.
+home_news: 5
+home_pubs: 8
+
+nav:
+  - {name: Publications, url: /publication/}
+  - {name: News, url: /news/}
+  - {name: Teaching, url: /teaching/}
+  - {name: HExSA Lab, url: /lab/}
+  - {name: Personal, url: /personal/}
+  - {name: CV, url: /cv.pdf}
+
+links:
+  - {name: Email, url: "mailto:kyle.hale@oregonstate.edu"}
+  - {name: Google Scholar, url: "https://scholar.google.com/citations?user=zYAOJqwAAAAJ&hl=en"}
+  - {name: GitHub, url: "https://github.com/khale"}
+  - {name: ACM DL, url: "https://dl.acm.org/profile/81548021280"}
+  - {name: CV, url: /cv.pdf}
+  - {name: PGP key, url: /pgpkey.asc}

@@ -1,26 +1,9 @@
-# IDE specific
+public/
+__pycache__/
+.venv/
+.DS_Store
 .idea/
 .vscode/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Node
-node_modules/
-
-# Hugo
-.hugo_build.lock
-go.sum
-resources/
-public/
-
-# Mac
-.DS_Store
-
-# Test
-test/go.sum
-
-package-lock.json
 
 # Claude
 Claude*
