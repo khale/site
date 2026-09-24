@@ -52,15 +52,15 @@ See [here]({{< ref "/#pubs" >}}).
 
 ### Undergraduates
 - Andrew Liang (OSU Honors College)
-- [Jamison Kerney](https://jamiek.co/)
-- [Karl Hallsby](https://www.linkedin.com/in/karlhallsby/)
-- [Joshua Bowden](https://jbowden.me/)
+- Jamison Kerney
+- [Karl Hallsby](https://raven.hallsby.com/)
+- Joshua Bowden
 - [Nick Wanninger](https://nickw.io/)
 - [Hussain Khajanchi](https://www.linkedin.com/in/hussainkhajanchi/)
 - [Iris Uwizeyimana](https://www.linkedin.com/in/irisuwizeyimana/?originalSubdomain=ca)
 - [Trevor Pritchett](https://www.linkedin.com/in/trevor-pritchett-230174187/)
 - [Devyn Keeney](https://www.linkedin.com/in/devyn-keeney/)
-- [Cooper Van Kampen](#)
+- Cooper Van Kampen#
 - [Justin Goodman](https://justgood.dev/)
 - [Sam Grayson](https://samgrayson.me/)
 - [Akhil Kodumuri](https://www.linkedin.com/in/akhil-kodumuri-9b0901168/)
