@@ -1,11 +1,13 @@
 # AWS Amplify Hosting build spec. A file in the repo overrides the build
 # settings saved in the Amplify console (which were set up for Hugo).
+# Works on both build images: Amazon Linux 2023 (has pyenv, Python 3.8-3.11)
+# and the older Amazon Linux 2 image (system python3, no pyenv).
 version: 1
 frontend:
   phases:
     preBuild:
       commands:
-        - pyenv global 3.11          # AL2023 build image ships 3.8-3.11
+        - if command -v pyenv >/dev/null 2>&1; then pyenv global 3.11; fi
         - python3 --version
         - python3 -m pip install --user -r requirements.txt
     build:

@@ -350,7 +350,10 @@ def add_news(text):
     path = ROOT / "data" / "news.yaml"
     old = path.read_text(encoding="utf-8") if path.exists() else ""
     head, sep, rest = old.partition("\n- ")
-    item = f'- date: {dt.date.today().isoformat()}\n  text: {yaml.safe_dump(text, width=10**6).strip().removesuffix("...").strip()}\n'
+    dumped = yaml.safe_dump(text, width=10**6).strip()
+    if dumped.endswith("..."):          # yaml's end-of-document marker for plain scalars
+        dumped = dumped[:-3].strip()
+    item = f"- date: {dt.date.today().isoformat()}\n  text: {dumped}\n"
     if sep:   # keep the header comment, insert new item first
         path.write_text(f"{head}\n{item}\n- {rest}", encoding="utf-8")
     else:
