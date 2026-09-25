@@ -18,7 +18,6 @@ Inputs (all plain text, no front-matter boilerplate):
     static/              copied verbatim into public/
 """
 import datetime as dt
-import html
 import http.server
 import os
 import re
@@ -163,7 +162,9 @@ def bib_to_pub(e, me):
     add("Website", e.get("website"))
 
     badges = [b.strip().lower() for b in e.get("badges", "").split(",") if b.strip()]
+    # HALE:2015:NAUTILUS -> hale-2015-nautilus; hale2021coalescent -> hale-2021-coalescent
     slug = e["key"].lower().replace(":", "-")
+    slug = re.sub(r"^([a-z]+)(\d{4})([a-z].*)$", r"\1-\2-\3", slug)
     return {
         "key": e["key"],
         "slug": slug,

@@ -1,6 +1,6 @@
-# halek.co
+# Website
 
-Personal site for Kyle C. Hale, plus the HExSA lab page. One Python script (`build.py`, ~350 lines)
+Personal site, plus the HExSA lab page. One Python script (`build.py`, ~350 lines)
 turns a few plain-text files into static HTML. There's no theme, framework or Hugo.
 
 ## Everyday edits
@@ -32,8 +32,8 @@ BibTeX and LaTeX ignore these, so the same `.bib` still works in papers.
   hidden   = {true},                        % keep in .bib, leave off the site
 ```
 
-The DOI button comes from `doi`. Each paper gets `/publication/<key>/` (the key is lowercased
-and `:` becomes `-`), with the abstract and a clean `cite.bib` that has these extra fields removed.
+The DOI button comes from `doi`. Each paper gets `/publication/<key>/` (the key is lowercased,
+`:` becomes `-`, and `hale2021coalescent` becomes `hale-2021-coalescent`), with the abstract and a clean `cite.bib` that has these extra fields removed.
 
 ## Preview locally (Docker)
 
@@ -69,8 +69,14 @@ skin, copy one of the files and change the tokens.
 
 ## Deploy
 
-Netlify runs `python3 build.py` (see `netlify.toml`) and publishes `public/`.
-`static/_redirects` keeps old Hugo-era URLs working.
+AWS Amplify Hosting builds each push to `main` using `amplify.yml`: it installs the requirements,
+runs `python3 build.py`, and publishes `public/`. That file overrides the old Hugo build settings
+saved in the Amplify console.
+
+Paper and page URLs match the old Hugo site; retired pages (old per-item news/teaching)
+fall through to the 404 page. In the Amplify console under **Rewrites and redirects**, the catch-all rule should be
+`/<*>` → `/404.html` with type `404 (Rewrite)`. The usual default points at `/index.html`,
+which would show the home page for every bad URL.
 
 ## Layout
 
@@ -83,6 +89,7 @@ pages/              markdown pages -> /<name>/
 templates/          Jinja2 HTML templates
 static/             copied as-is (css/, css/skins/, fonts/, img/, papers/, cv.pdf, ...)
 Dockerfile, compose.yaml   local preview
+amplify.yml         AWS Amplify build spec
 ```
 
 The lab page (`templates/lab.html`, `static/css/lab.css`, `data/lab.yaml`, `pages/lab.md`)

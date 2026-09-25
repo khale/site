@@ -1,0 +1,17 @@
+# AWS Amplify Hosting build spec. A file in the repo overrides the build
+# settings saved in the Amplify console (which were set up for Hugo).
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - pyenv global 3.11          # AL2023 build image ships 3.8-3.11
+        - python3 --version
+        - python3 -m pip install --user -r requirements.txt
+    build:
+      commands:
+        - python3 build.py
+  artifacts:
+    baseDirectory: public
+    files:
+      - '**/*'
