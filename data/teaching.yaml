@@ -6,10 +6,13 @@
   courses:
     - code: CS/ECE 4/599
       title: Modern Memory Systems
-      terms: ["Winter '26"]
-    - code: CS/ECE 472
+      terms: ["Winter '25", "Winter '26"]
+    - code: CS 4/574
+      title: Operating Systems II
+      terms: ["Spring '25", "Spring '26"]
+    - code: CS/ECE 4/572
       title: Computer Architecture
-      terms: ["Fall '24"]
+      terms: ["Fall '24", "Fall '26"]
 
 - institution: Illinois Institute of Technology
   courses:
