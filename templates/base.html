@@ -39,6 +39,7 @@
     © {{ now.year }} {{ site.name }} · <a href="{{ site.affiliation.url }}">{{ site.affiliation.name }}</a> · <a href="mailto:{{ site.email }}">{{ site.email }}</a>
   </div>
 </footer>
+{% if "data-bibtex" in self.main() %}{% include "_bibtex_dialog.html" %}{% endif %}
 {% if dev %}
 {# Preview-only skin picker (python3 build.py serve). Not in the deployed site. #}
 <div class="skin-picker">

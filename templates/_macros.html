@@ -18,7 +18,7 @@
 {% macro links(p, bibtex=true) -%}
 <div class="pub-links">
   {% for l in p.links %}<a class="btn" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
-  {% if bibtex %}<a class="btn" href="/publication/{{ p.slug }}/cite.bib">BibTeX</a>{% endif %}
+  {% if bibtex %}<a class="btn" href="/publication/{{ p.slug }}/cite.bib" data-bibtex="{{ p.title }}">BibTeX</a>{% endif %}
 </div>
 {%- endmacro %}
 

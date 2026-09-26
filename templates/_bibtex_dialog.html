@@ -1,0 +1,51 @@
+{# BibTeX popup for any link with data-bibtex (pubs list). Without JS the link just downloads cite.bib. #}
+<dialog id="bibtex-dialog" class="bib-dialog" aria-labelledby="bib-dialog-title">
+  <div class="bib-dialog__head">
+    <h2 id="bib-dialog-title">BibTeX</h2>
+    <button type="button" class="bib-dialog__close" data-close aria-label="Close">×</button>
+  </div>
+  <p class="bib-dialog__paper"></p>
+  <pre class="bibtex" tabindex="0"></pre>
+  <div class="bib-dialog__actions">
+    <a class="btn bib-dialog__download" href="#" download>Download .bib</a>
+    <button type="button" class="bib-dialog__copy">Copy to clipboard</button>
+  </div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('bibtex-dialog');
+  if (!dlg || typeof dlg.showModal !== 'function') return;   // very old browser: links download
+  var pre = dlg.querySelector('pre'), paper = dlg.querySelector('.bib-dialog__paper'),
+      copy = dlg.querySelector('.bib-dialog__copy'), dl = dlg.querySelector('.bib-dialog__download');
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-bibtex]');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;   // let modified clicks download
+    e.preventDefault();
+    paper.textContent = a.dataset.bibtex;
+    pre.textContent = 'Loading…';
+    dl.href = a.href;
+    copy.textContent = 'Copy to clipboard';
+    dlg.showModal();
+    fetch(a.href).then(function (r) { return r.text(); })
+      .then(function (t) { pre.textContent = t.trim(); })
+      .catch(function () { pre.textContent = 'Could not load BibTeX. Use Download instead.'; });
+  });
+
+  copy.addEventListener('click', function () {
+    var text = pre.textContent;
+    var done = function () { copy.textContent = 'Copied ✓'; setTimeout(function () { copy.textContent = 'Copy to clipboard'; }, 1500); };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done);
+    } else {                                   // fallback for plain-http previews
+      var r = document.createRange(); r.selectNodeContents(pre);
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      try { document.execCommand('copy'); done(); } catch (err) {}
+    }
+  });
+
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg || e.target.hasAttribute('data-close')) dlg.close();   // backdrop or ×
+  });
+})();
+</script>

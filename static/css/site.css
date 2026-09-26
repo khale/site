@@ -157,3 +157,23 @@ pre, code { font-family: var(--mono); font-size: .85em; }
   .gutter { flex: none; }
   .section-title { flex-wrap: wrap; }
 }
+
+/* ---------- BibTeX dialog (pubs list) ---------- */
+.bib-dialog {
+  width: min(44rem, calc(100vw - 2rem)); max-height: calc(100vh - 4rem);
+  padding: 1.1rem 1.25rem 1.25rem; border: 1px solid var(--rule); border-radius: 10px;
+  background: var(--bg); color: var(--fg); box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+.bib-dialog::backdrop { background: rgba(10,12,16,.45); }
+.bib-dialog__head { display: flex; align-items: center; justify-content: space-between; }
+.bib-dialog__head h2 { font-size: 1.1rem; margin: 0; }
+.bib-dialog__close { font-size: 1.5rem; line-height: 1; padding: 0 .35rem; border: 0; background: none; color: var(--muted); cursor: pointer; }
+.bib-dialog__close:hover { color: var(--fg); }
+.bib-dialog__paper { margin: .25rem 0 .75rem; color: var(--muted); font-size: .9rem; }
+.bib-dialog .bibtex { margin: 0; max-height: 55vh; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+.bib-dialog__actions { display: flex; justify-content: flex-end; align-items: center; gap: .6rem; margin-top: .9rem; }
+.bib-dialog__copy {
+  font: 600 .85rem var(--sans); padding: .4rem .9rem; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--link); background: var(--link); color: var(--bg);
+}
+.bib-dialog__copy:hover { background: var(--link-hover); border-color: var(--link-hover); }
