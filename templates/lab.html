@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% from "_macros.html" import person %}
 {% block bodyclass %}lab{% endblock %}
-{% block head %}<link rel="stylesheet" href="/css/lab.css">{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ asset('/css/lab.css') }}">{% endblock %}
 {% block og_image %}/img/og-lab.png{% endblock %}
 {% block twitter_card %}summary_large_image{% endblock %}
 {% block description %}HExSA Lab at Oregon State University: high-performance experimental systems and architecture.{% endblock %}
@@ -32,7 +32,7 @@
 <h2 class="lab-heading">Resources</h2>
 <ul class="resources">
 {% for r in lab.resources %}
-  <li><a href="{{ r.url }}">{{ r.name }}</a>{% if r.note %}<span class="note">{{ r.note }}</span>{% endif %}</li>
+  <li><a href="{{ r.url }}">{{ r.name }}</a>{% if r.note %}<span class="note"> — {{ r.note }}</span>{% endif %}</li>
 {% endfor %}
 </ul>
 {% endif %}

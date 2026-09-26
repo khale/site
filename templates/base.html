@@ -16,8 +16,8 @@
 <meta property="og:url" content="{{ site.url }}{{ url }}">
 <meta property="og:image" content="{{ site.url }}{% block og_image %}/img/portrait.jpg{% endblock %}">
 <meta name="twitter:card" content="{% block twitter_card %}summary{% endblock %}">
-<link rel="stylesheet" href="/css/site.css">
-<link rel="stylesheet" href="/css/skins/{{ site.skin }}.css" id="skin-css">
+<link rel="stylesheet" href="{{ asset('/css/site.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/skins/' ~ site.skin ~ '.css') }}" id="skin-css">
 {% block head %}{% endblock %}
 </head>
 <body class="{% block bodyclass %}{% endblock %}">

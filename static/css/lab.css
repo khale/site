@@ -39,4 +39,4 @@ body.lab .resources { list-style: none; padding: 0; margin: 0; display: grid; gr
 body.lab .resources li { padding-left: .8rem; border-left: 2px solid var(--rule); }
 body.lab .resources li:hover { border-left-color: var(--hexsa-orange); }
 body.lab .resources a { font-weight: 600; }
-body.lab .resources .note { display: block; font-size: .88rem; }
+body.lab .resources .note { font-size: .9rem; }

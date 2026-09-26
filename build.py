@@ -274,6 +274,13 @@ def as_date(d):
 
 # -------------------------------------------------------------- build ------
 
+def asset(path):
+    """/css/site.css -> /css/site.css?v=<content hash>, so browsers/CDN fetch fresh CSS after edits."""
+    import hashlib
+    f = ROOT / "static" / path.lstrip("/")
+    return f"{path}?v={hashlib.md5(f.read_bytes()).hexdigest()[:8]}" if f.exists() else path
+
+
 def last_updated():
     """Date of the latest git commit (what visitors care about), else today."""
     import subprocess
@@ -310,7 +317,8 @@ def build():
                              autoescape=jinja2.select_autoescape(["html"]),
                              trim_blocks=True, lstrip_blocks=True)
     env.filters["markdown"] = lambda t: Markup(md_inline(t or ""))
-    env.globals.update(site=site, now=dt.date.today(), dev=DEV, skins=skins, updated=last_updated())
+    env.globals.update(site=site, now=dt.date.today(), dev=DEV, skins=skins, updated=last_updated(),
+                       asset=asset)
 
     if OUT.exists():
         shutil.rmtree(OUT)
