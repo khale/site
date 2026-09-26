@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block description %}{{ page.description or site.description }}{% endblock %}
 {% block main %}
 <article class="prose">
   <h1 class="page-title">{{ page.title }}</h1>

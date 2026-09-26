@@ -1,4 +1,5 @@
 ---
+description: "Advice for undergraduate and MS students considering research or a PhD in computer systems."
 title: PhD Application Tips for Undergrads/MS Students
 ---
 

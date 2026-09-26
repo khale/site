@@ -18,6 +18,7 @@ Inputs (all plain text, no front-matter boilerplate):
     static/              copied verbatim into public/
 """
 import datetime as dt
+import html
 import http.server
 import os
 import re
@@ -182,7 +183,29 @@ def bib_to_pub(e, me):
         "links": links,
         "hidden": e.get("hidden", "").lower() in ("true", "yes", "1"),
         "bibtex": to_bibtex(e, drop=SITE_FIELDS | {"abstract"}),
+        "meta": scholar_meta(e, authors, year, mnum),
     }
+
+
+def scholar_meta(e, authors, year, month):
+    """(name, content) pairs for Google Scholar's citation_* meta tags."""
+    m = [("citation_title", delatex(e.get("title", "")))]
+    m += [("citation_author", a) for a in authors]
+    m.append(("citation_publication_date", f"{year}/{month:02d}" if month else str(year)))
+    if e["type"] == "article":
+        m += [("citation_journal_title", delatex(e.get("journal", ""))),
+              ("citation_volume", e.get("volume", "")), ("citation_issue", e.get("number", ""))]
+    elif e["type"] == "techreport":
+        m += [("citation_technical_report_institution", delatex(e.get("institution", ""))),
+              ("citation_technical_report_number", e.get("number", ""))]
+    elif e.get("booktitle"):
+        m.append(("citation_conference_title", delatex(e["booktitle"])))
+    pages = re.split(r"\s*[-–—]+\s*", e.get("pages", ""))
+    if len(pages) == 2:
+        m += [("citation_firstpage", pages[0]), ("citation_lastpage", pages[1])]
+    m += [("citation_publisher", delatex(e.get("publisher", ""))), ("citation_doi", e.get("doi", "")),
+          ("citation_isbn", e.get("isbn", ""))]
+    return [(k, v) for k, v in m if v]
 
 
 def to_bibtex(e, drop=()):
@@ -256,6 +279,7 @@ def build():
     t0 = time.time()
     site = yaml.safe_load((ROOT / "site.yaml").read_text(encoding="utf-8"))
     site["skin"] = os.environ.get("SKIN") or site.get("skin", "paper")
+    site["same_as"] = [l["url"] for l in site.get("links", []) if l["url"].startswith("http")]
     skins = sorted(p.stem for p in (ROOT / "static/css/skins").glob("*.css"))
     if site["skin"] not in skins:
         sys.exit(f"unknown skin {site['skin']!r}; available: {', '.join(skins)}")
@@ -276,7 +300,10 @@ def build():
         shutil.rmtree(OUT)
     shutil.copytree(ROOT / "static", OUT)
 
+    urls = []
+
     def render(url, template, **ctx):
+        urls.append(url)
         dest = OUT / url.strip("/") / "index.html" if url != "/" else OUT / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(env.get_template(template).render(url=url, **ctx), encoding="utf-8")
@@ -302,6 +329,15 @@ def build():
         url="/404.html", title="Not found",
         page={"title": "Page not found", "content": '<p>Try the <a href="/">home page</a>.</p>'}),
         encoding="utf-8")
+
+    base = site["url"].rstrip("/")
+    (OUT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <url><loc>{html.escape(base + u)}</loc></url>\n" for u in sorted(urls))
+        + "</urlset>\n", encoding="utf-8")
+    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n",
+                                    encoding="utf-8")
 
     print(f"built {len(pubs)} pubs, {len(news)} news items, {len(pages)} pages, skin '{site['skin']}' "
           f"in {time.time() - t0:.2f}s -> {OUT.relative_to(ROOT)}/")

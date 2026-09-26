@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% from "_macros.html" import authors, badges, tags, links %}
-{% block description %}{{ pub.title }}. {{ pub.venue }}.{% endblock %}
+{% block description %}{% if pub.abstract %}{{ pub.abstract | truncate(220, killwords=False, end='…', leeway=0) }}{% else %}{{ pub.title }}. {{ pub.venue }}.{% endif %}{% endblock %}
+{% block og_type %}article{% endblock %}
 {% block head %}
-<meta name="citation_title" content="{{ pub.title }}">
-{% for a in pub.authors %}<meta name="citation_author" content="{{ a.name }}">
-{% endfor %}<meta name="citation_publication_date" content="{{ pub.year }}">
-{% for l in pub.links if l.label == 'PDF' %}<meta name="citation_pdf_url" content="{{ l.url }}">{% endfor %}
+{# Google Scholar reads these (Highwire Press tags) #}
+{% for name, content in pub.meta %}<meta name="{{ name }}" content="{{ content }}">
+{% endfor %}
+{% for l in pub.links if l.label == 'PDF' %}<meta name="citation_pdf_url" content="{% if l.url.startswith('/') %}{{ site.url }}{% endif %}{{ l.url }}">
+{% endfor %}<meta name="citation_abstract_html_url" content="{{ site.url }}{{ url }}">
 {% endblock %}
 {% block main %}
 <article class="pub-detail">

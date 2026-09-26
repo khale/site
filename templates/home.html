@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% from "_macros.html" import pub_compact, news_item %}
 {% block bodyclass %}home{% endblock %}
+{% block head %}
+<script type="application/ld+json">
+{{ {"@context": "https://schema.org", "@type": "Person", "name": site.name, "url": site.url,
+    "image": site.url ~ "/img/portrait.jpg", "jobTitle": site.role, "email": "mailto:" ~ site.email,
+    "affiliation": {"@type": "CollegeOrUniversity", "name": site.affiliation.name, "url": site.affiliation.url},
+    "sameAs": site.same_as} | tojson(indent=2) }}
+</script>
+{% endblock %}
 {% block main %}
 <section class="intro">
   <img class="portrait" src="/img/portrait.jpg" alt="Photo of {{ site.name }}" width="180" height="190">

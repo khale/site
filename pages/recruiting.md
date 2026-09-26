@@ -1,4 +1,5 @@
 ---
+description: "PhD openings in Kyle C. Hale's systems research group (HExSA Lab) at Oregon State University."
 title: PhD Student Openings
 ---
 

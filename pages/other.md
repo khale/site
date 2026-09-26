@@ -1,4 +1,5 @@
 ---
+description: "Personal interests, hobby projects, and links from Kyle C. Hale."
 title: Personal
 ---
 

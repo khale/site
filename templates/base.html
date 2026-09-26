@@ -7,6 +7,15 @@
 <meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
 <link rel="canonical" href="{{ site.url }}{{ url }}">
 <link rel="icon" href="/favicon.png">
+{% if url == '/404.html' %}<meta name="robots" content="noindex">
+{% endif %}
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:type" content="{% block og_type %}website{% endblock %}">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta property="og:description" content="{{ self.description() | trim }}">
+<meta property="og:url" content="{{ site.url }}{{ url }}">
+<meta property="og:image" content="{{ site.url }}{% block og_image %}/img/portrait.jpg{% endblock %}">
+<meta name="twitter:card" content="{% block twitter_card %}summary{% endblock %}">
 <link rel="stylesheet" href="/css/site.css">
 <link rel="stylesheet" href="/css/skins/{{ site.skin }}.css" id="skin-css">
 {% block head %}{% endblock %}

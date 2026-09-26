@@ -78,6 +78,13 @@ fall through to the 404 page. In the Amplify console under **Rewrites and redire
 `/<*>` → `/404.html` with type `404 (Rewrite)`. The usual default points at `/index.html`,
 which would show the home page for every bad URL.
 
+## Search engines and link previews
+
+The build also writes `sitemap.xml` and `robots.txt`. Every page gets Open Graph tags, so
+links shared on Slack, LinkedIn and similar sites show a preview card. Paper pages also get
+Google Scholar `citation_*` tags generated from the .bib. To give a page its own preview text,
+add `description: "..."` to its front matter. The lab page's preview image is `static/img/og-lab.png`.
+
 ## Layout
 
 ```
