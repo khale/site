@@ -1,6 +1,10 @@
 ---
 description: "PhD openings in Kyle C. Hale's systems research group (HExSA Lab) at Oregon State University."
 title: PhD Student Openings
+# Box shown at the top of the page. Delete these lines when you're recruiting again.
+notice: >-
+  **My group is currently at capacity for PhD students,** and I'm not taking on new
+  PhD advisees this admissions cycle. The information below is kept for reference.
 ---
 
 I am currently looking for talented, hard-working PhD students broadly in the

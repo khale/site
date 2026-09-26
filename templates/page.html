@@ -3,6 +3,7 @@
 {% block main %}
 <article class="prose">
   <h1 class="page-title">{{ page.title }}</h1>
+  {% if page.notice %}<aside class="callout callout-top">{{ page.notice | markdown }}</aside>{% endif %}
   {{ page.content | safe }}
 </article>
 {% endblock %}
