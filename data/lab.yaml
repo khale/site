@@ -8,9 +8,10 @@
 resources:
   - {name: Publications, url: /publication/, note: "Full list, with PDFs, code, and artifacts"}
   - {name: Code on GitHub, url: "https://github.com/hexsa-lab", note: "Lab repositories"}
-  - {name: Joining as a PhD student, url: /recruiting/, note: "What I look for (currently at capacity)"}
-  - {name: Research advice, url: /ugrad-research/, note: "For undergrads and MS students considering research or a PhD"}
-  - {name: Teaching, url: /teaching/, note: "Courses I've taught at OSU and IIT"}
+  - {name: Teaching, url: /teaching/, note: "Related courses"}
+  - {name: Open Positions, url: /recruiting/, note: "What I look for"} 
+  - {name: Systems Deadlines, url: "https://khale.github.io/sys-deadlines/", note: "Deadlines for systems conferences"}
+  - {name: Style guide, url: "https://hale-legacy.com/hexsa-styleguide/", note: "Styleguide for lab technical writing"}
 
 current:
   - group: Faculty
