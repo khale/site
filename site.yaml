@@ -8,13 +8,20 @@ description: Kyle C. Hale, Associate Professor of Computer Science at Oregon Sta
 role: Associate Professor of Computer Science
 affiliation: {name: Oregon State University, url: "https://engineering.oregonstate.edu/EECS"}
 email: kyle.hale@oregonstate.edu
+office: 2027 Kelley Engineering Center, Corvallis, OR 97331
+
+# Box under the bio on the home page (Markdown).
+prospective: >-
+  **Prospective students:** if you're applying for a PhD, please read
+  [PhD openings in my group](/recruiting/) before emailing. Undergrads and MS students
+  curious about research should start with [advice on research and grad school](/ugrad-research/).
 
 # Names bolded in author lists.
 highlight_names: ["Kyle C. Hale", "Kyle Hale"]
 
 # How many items the home page shows.
-home_news: 5
-home_pubs: 8
+home_news: 3
+home_pubs: 6   # only used if no paper in pubs.bib has selected = {true}
 
 nav:
   - {name: Publications, url: /publication/}

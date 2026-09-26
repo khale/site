@@ -86,6 +86,7 @@
   url       = {https://doi.org/10.1145/2749246.2749264},
   keywords  = {hrts, hybrid runtimes, nautilus, parallel runtimes},
   venue     = {HPDC '15},
+  selected  = {true},
   award     = {Best Short Paper Presentation},
   pdf       = {http://users.eecs.northwestern.edu/~kch479/docs/nautilus.pdf},
   abstract  = {The needs of parallel runtime systems and the increasingly sophisticated languages and compilers they support do not line up with the services provided by general-purpose OSes. Furthermore, the semantics available to the runtime are lost at the system-call boundary in such OSes. Finally, because a runtime executes at user-level in such an environment, it cannot leverage hardware features that require kernel-mode privileges---a large portion of the functionality of the machine is lost to it. These limitations warp the design, implementation, functionality, and performance of parallel runtimes. We summarize the case for eliminating these compromises by transforming parallel runtimes into OS kernels. We also demonstrate that it is feasible to do so. Our evidence comes from Nautilus, a prototype kernel framework that we built to support such transformations. After describing Nautilus, we report on our experiences using it to transform three very different runtimes into kernels.}
@@ -292,6 +293,7 @@
   url       = {https://doi.org/10.1145/3453483.3460969},
   keywords  = {parallel programming languages, granularity control},
   venue     = {PLDI '21},
+  selected  = {true},
   badges    = {functional},
   pdf       = {https://www.andrew.cmu.edu/user/mrainey//papers/tpal-long.pdf},
   code      = {https://github.com/mikerainey/tpal},
@@ -403,6 +405,7 @@
   doi       = {10.1145/3492321.3519553},
   url       = {https://doi.org/10.1145/3492321.3519553},
   venue     = {EuroSys '22},
+  selected  = {true},
   award     = {Giles Muller Best Artifact Award},
   ugrad     = {true},
   badges    = {available, functional, reproduced},
@@ -483,6 +486,7 @@
   location  = {San Diego, CA, USA},
   doi       = {10.1145/3617232.3624856},
   venue     = {ASPLOS '24},
+  selected  = {true},
   badges    = {available, functional, reproduced},
   code      = {https://github.com/compiler-disagg/TrackFM},
   artifact  = {https://doi.org/10.5281/zenodo.10059217}
@@ -527,6 +531,7 @@
   month     = {May},
   location  = {New Orleans, LA, USA},
   venue     = {IPDPS '26},
+  selected  = {true},
   pdf       = {/papers/shipyard-ipdps26.pdf}
   abstract  = {Leader-based consistency protocols often struggle with scalability due to the centralization of client request ordering. The leader, responsible for ensuring consistency by ordering reads and writes, becomes a bottleneck under high load, limiting overall system performance. This limitation is exacerbated by the tight coupling of consistency protocols with fault tolerance mechanisms, which further strain the leader’s capacity. Keyspace sharding, a widely adopted technique in databases and blockchain systems, helps mitigate this bottleneck by dis- tributing the workload. However, it introduces two primary challenges: first, maintaining consistency across shards, and second, balancing the workload between them. While several multi-leader approaches have been proposed to address consistency issues, they often neglect the crucial aspect of leadership balancing. Furthermore, these existing solutions frequently fail to consider dynamic factors such as CPU utilization, request frequency, and other performance metrics that significantly impact overall system efficiency. To address these gaps, we propose Skiff, a variant of the Raft protocol that automatically balances leadership for a single shard. Furthermore, we introduce Shipyard, a higher-level protocol that manages all sharded keyspaces as a unified system, integrating failure recovery and offering linearizable reads and writes.}
 }
@@ -541,6 +546,8 @@
     month = {September},
     arxiv = {2608.20734v1},
     location = {Alexandria, VA, USA},
+    venue = {Cluster '26},
+    selected = {true},
 }
 
 

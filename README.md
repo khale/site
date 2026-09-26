@@ -8,11 +8,11 @@ turns a few plain-text files into static HTML. There's no theme, framework or Hu
 | To…                      | Edit                   | How                                                                 |
 |--------------------------|------------------------|---------------------------------------------------------------------|
 | Add a paper              | `pubs.bib`             | Paste the BibTeX entry and add `venue = {ASPLOS '27}` (plus any extras below) |
-| Add a news item          | `data/news.yaml`       | Add `- date: 2026-10-01` / `text: …`, or run `python3 build.py news "…"` |
+| Add a news item          | `data/news.yaml`       | Add `- date: 2026-10-01` / `text: …` (optional `short:` for the home page), or run `python3 build.py news "…"` |
 | Add a course or term     | `data/teaching.yaml`   | Add one line under the course                                       |
 | Update lab members       | `data/lab.yaml`        | Move a line from `current` to `alumni`                              |
 | Change bio / pages       | `pages/*.md`           | Markdown. `index.md` is the home-page bio                           |
-| Change nav, links, counts | `site.yaml`           |                                                                     |
+| Change nav, links, office, student note | `site.yaml` |                                                                 |
 | Replace CV               | `static/cv.pdf`        |                                                                     |
 
 ### Extra BibTeX fields the site understands
@@ -30,6 +30,7 @@ BibTeX and LaTeX ignore these, so the same `.bib` still works in papers.
   artifact = {https://zenodo.org/...},
   slides   = {...},  video = {...},  website = {...},
   hidden   = {true},                        % keep in .bib, leave off the site
+  selected = {true},                        % feature on the home page
 ```
 
 The DOI button comes from `doi`. Each paper gets `/publication/<key>/` (the key is lowercased,

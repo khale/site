@@ -2,26 +2,33 @@
 #
 #   - date: 2026-09-24          # YYYY-MM-DD, or just YYYY-MM
 #     text: One line of Markdown. Links like [this](https://...) work.
+#     short: Optional shorter version for the home page (default: first sentence of text).
 #
 # Shortcut:  python3 build.py news "Paper accepted to ..."   (adds one dated today)
 
 - date: 2026-07-06
   text: Nanda's paper describing MemPower, a new modeling and analysis framework for software-directed DVFS was accepted to IEEE Cluster 2026! Congrats Nanda!
+  short: "Nanda's [MemPower](/publication/velugoti-2026-mempower/) paper accepted to IEEE Cluster '26."
 
 - date: 2026-02-23
   text: Xincheng's paper on load-balanced consensus for sharded deployments has been accepted to IPDPS '26. Congrats Xin!
+  short: "Xincheng's [Shipyard](/publication/yang-2026-shipyard/) paper accepted to IPDPS '26."
 
 - date: 2023-11-01
   text: Jamie won third place in the ACM student research competition at the Supercomputing '23 conference. His work focuses on Python Unikernels for HPC. Congrats Jamie!
+  short: "Jamie wins third place in the ACM Student Research Competition at SC '23."
 
 - date: 2023-08-30
   text: Brian's paper on using compilers to automatically transform applications to use disaggregated memory has been accepted to [ASPLOS '24](https://www.asplos-conference.org/asplos2024/). Congratulations Brian on this well-deserved achievement and thanks to our wonderful collaborators at Northwestern University!
+  short: "Brian's [TrackFM](/publication/tauro-2024-trackfm/) paper accepted to ASPLOS '24."
 
 - date: 2023-08-08
   text: A team of three IIT faculty ([Rujia Wang](https://rujiawang.github.io/), Kyle Hale, and [Xian-He Sun](http://www.cs.iit.edu/~scs/sun/)) and a collaborator at the University of Iowa, [Peng Jiang](https://homepage.divms.uiowa.edu/~penjiang/) won a $1M award from NSF to investigate novel architectures for next-generation systems integrating near-data processing. Congrats all and thanks to NSF!
+  short: "NSF award with Rujia Wang, Xian-He Sun, and Peng Jiang on near-data processing architectures."
 
 - date: 2023-03-10
   text: Thanks to tons of hard work from HExSA Lab members, I am incredibly honored to have been awarded the NSF CAREER grant! Many thanks to NSF, to all my collaborators, mentors, colleagues, and most of all to my wonderful students! I am thrilled to be able to continue our exciting research on novel virtualization technology and system software for secure and efficient cloud computing.
+  short: "HExSA Lab awarded an NSF CAREER grant."
 
 - date: 2022-04-06
   text: Our Virtines paper won the Distinguished Artifact Award at EuroSys '22. Great work everyone! The code is available [here](https://github.com/virtines).

@@ -29,6 +29,7 @@ import time
 from pathlib import Path
 
 import jinja2
+from markupsafe import Markup
 import markdown as md_lib
 import yaml
 
@@ -43,7 +44,7 @@ MONTH_NAMES = ["", "January", "February", "March", "April", "May", "June", "July
                "August", "September", "October", "November", "December"]
 
 # Fields that exist only for this website; stripped from the per-paper cite.bib.
-SITE_FIELDS = {"venue", "award", "ugrad", "badges", "code", "artifact", "slides",
+SITE_FIELDS = {"venue", "award", "ugrad", "selected", "badges", "code", "artifact", "slides",
                "video", "website", "hidden", "pdf", "arxiv"}
 
 ACM_BADGES = {
@@ -182,6 +183,7 @@ def bib_to_pub(e, me):
         "badges": [{"id": b, "label": ACM_BADGES.get(b, b)} for b in badges],
         "links": links,
         "hidden": e.get("hidden", "").lower() in ("true", "yes", "1"),
+        "selected": e.get("selected", "").lower() in ("true", "yes", "1"),
         "bibtex": to_bibtex(e, drop=SITE_FIELDS | {"abstract"}),
         "meta": scholar_meta(e, authors, year, mnum),
     }
@@ -272,6 +274,17 @@ def as_date(d):
 
 # -------------------------------------------------------------- build ------
 
+def last_updated():
+    """Date of the latest git commit (what visitors care about), else today."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "log", "-1", "--format=%cs"], cwd=ROOT, capture_output=True,
+                             text=True, timeout=5).stdout.strip()
+        return dt.date.fromisoformat(out)
+    except Exception:
+        return dt.date.today()
+
+
 DEV = False   # set by `serve`: adds the skin switcher
 
 
@@ -288,13 +301,16 @@ def build():
     news = []
     for n in load_yaml("news.yaml") or []:
         d = as_date(n["date"])
-        news.append({"date": d, "date_str": d.strftime("%b %Y"), "html": md_inline(n["text"])})
+        short = n.get("short") or re.split(r"(?<=[.!?])\s+(?=[A-Z])", n["text"].strip(), maxsplit=1)[0]
+        news.append({"date": d, "date_str": d.strftime("%b %Y"), "html": md_inline(n["text"]),
+                     "short_html": md_inline(short)})
     news.sort(key=lambda n: n["date"], reverse=True)
 
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(ROOT / "templates"),
                              autoescape=jinja2.select_autoescape(["html"]),
                              trim_blocks=True, lstrip_blocks=True)
-    env.globals.update(site=site, now=dt.date.today(), dev=DEV, skins=skins)
+    env.filters["markdown"] = lambda t: Markup(md_inline(t or ""))
+    env.globals.update(site=site, now=dt.date.today(), dev=DEV, skins=skins, updated=last_updated())
 
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -310,8 +326,9 @@ def build():
 
     pages = {p.stem: read_page(p) for p in sorted((ROOT / "pages").glob("*.md"))}
 
-    render("/", "home.html", page=pages["index"], news=news[:site.get("home_news", 5)],
-           pubs=pubs[:site.get("home_pubs", 8)])
+    selected = [p for p in pubs if p["selected"]] or pubs[:site.get("home_pubs", 8)]
+    render("/", "home.html", page=pages["index"], news=news[:site.get("home_news", 3)],
+           pubs=selected, selected_mode=any(p["selected"] for p in pubs))
     render("/publication/", "pubs.html", title="Publications", pubs=pubs)
     for p in pubs:
         render(f"/publication/{p['slug']}/", "pub.html", title=p["title"], pub=p)

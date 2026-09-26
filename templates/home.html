@@ -15,6 +15,7 @@
   <div>
     <h1>{{ site.name }}</h1>
     <p class="role">{{ site.role }}<br><a href="{{ site.affiliation.url }}">{{ site.affiliation.name }}</a></p>
+    {% if site.office %}<p class="contact">{{ site.office }}</p>{% endif %}
     <ul class="profile-links">
       {% for l in site.links %}<li><a href="{{ l.url }}">{{ l.name }}</a></li>{% endfor %}
     </ul>
@@ -25,15 +26,19 @@
 {{ page.content | safe }}
 </section>
 
+{% if site.prospective %}
+<aside class="callout">{{ site.prospective | markdown }}</aside>
+{% endif %}
+
 <section>
   <h2 class="section-title">News <a class="more" href="/news/">All news →</a></h2>
   <ul class="news-list">
-    {% for n in news %}{{ news_item(n) }}{% endfor %}
+    {% for n in news %}{{ news_item(n, short=true) }}{% endfor %}
   </ul>
 </section>
 
 <section>
-  <h2 class="section-title">Recent publications <a class="more" href="/publication/">All publications →</a></h2>
+  <h2 class="section-title">{{ "Selected" if selected_mode else "Recent" }} publications <a class="more" href="/publication/">All publications →</a></h2>
   {% for p in pubs %}{{ pub_compact(p) }}{% endfor %}
 </section>
 {% endblock %}

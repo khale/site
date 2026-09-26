@@ -23,7 +23,7 @@
 <body class="{% block bodyclass %}{% endblock %}">
 <header class="site-header">
   <div class="wrap">
-    <a class="site-name" href="/">{{ site.name }}</a>
+    {% if url != '/' %}<a class="site-name" href="/">{{ site.name }}</a>{% else %}<span></span>{% endif %}
     <nav aria-label="Main">
       {% for item in site.nav %}
       <a href="{{ item.url }}"{% if url != '/' and url.startswith(item.url) %} aria-current="page"{% endif %}>{{ item.name }}</a>
@@ -37,6 +37,7 @@
 <footer class="site-footer">
   <div class="wrap">
     © {{ now.year }} {{ site.name }} · <a href="{{ site.affiliation.url }}">{{ site.affiliation.name }}</a> · <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <span class="updated">Last updated {{ updated.strftime("%B") }} {{ updated.day }}, {{ updated.year }}</span>
   </div>
 </footer>
 {% if "data-bibtex" in self.main() %}{% include "_bibtex_dialog.html" %}{% endif %}

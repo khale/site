@@ -3,7 +3,7 @@
 {%- endmacro %}
 
 {% macro badges(p) -%}
-{% for b in p.badges %}<a class="acm-badge" href="https://www.acm.org/publications/policies/artifact-review-and-badging-current#{{ b.id }}" title="ACM badge: {{ b.label }}"><img src="/img/acm/{{ b.id }}.png" alt="ACM badge: {{ b.label }}" width="20" height="20"></a>{% endfor %}
+{% if p.badges %}<span class="badges">{% endif %}{% for b in p.badges %}<a class="acm-badge" href="https://www.acm.org/publications/policies/artifact-review-and-badging-current#{{ b.id }}" title="ACM badge: {{ b.label }}"><img src="/img/acm/{{ b.id }}.png" alt="ACM badge: {{ b.label }}" width="20" height="20"></a>{% endfor %}{% if p.badges %}</span>{% endif %}
 {%- endmacro %}
 
 {% macro tags(p) -%}
@@ -48,8 +48,8 @@
 </article>
 {%- endmacro %}
 
-{% macro news_item(n) -%}
-<li class="news-item"><time class="gutter" datetime="{{ n.date }}">{{ n.date_str }}</time><div>{{ n.html | safe }}</div></li>
+{% macro news_item(n, short=false) -%}
+<li class="news-item"><time class="gutter" datetime="{{ n.date }}">{{ n.date_str }}</time><div>{{ (n.short_html if short else n.html) | safe }}</div></li>
 {%- endmacro %}
 
 {% macro person(p) -%}
