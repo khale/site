@@ -32,7 +32,7 @@
 <h2 class="lab-heading">Resources</h2>
 <ul class="resources">
 {% for r in lab.resources %}
-  <li><a href="{{ r.url }}">{{ r.name }}</a>{% if r.note %}<span class="note"> — {{ r.note }}</span>{% endif %}</li>
+  <li><a href="{{ r.url }}">{{ r.name }}</a>{% if r.note %}<span class="note"> · {{ r.note }}</span>{% endif %}</li>
 {% endfor %}
 </ul>
 {% endif %}
