@@ -28,8 +28,14 @@
 {% endfor %}
 </div>
 
-<h2 class="lab-heading">Publications</h2>
-<p>See the <a href="/publication/">full publication list</a>.</p>
+{% if lab.resources %}
+<h2 class="lab-heading">Resources</h2>
+<ul class="resources">
+{% for r in lab.resources %}
+  <li><a href="{{ r.url }}">{{ r.name }}</a>{% if r.note %}<span class="note">{{ r.note }}</span>{% endif %}</li>
+{% endfor %}
+</ul>
+{% endif %}
 
 <h2 class="lab-heading">Alumni</h2>
 <div class="roster roster-alumni">

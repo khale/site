@@ -1,5 +1,16 @@
 # HExSA lab roster. A person is either a plain name or {name, url, note}.
 # To move someone to alumni, cut their line and paste it under alumni.
+#
+# resources: links shown in the lab page's Resources section, in this order.
+#   Each is {name, url, note}; note is optional. url can be a page on this site
+#   (/recruiting/, or a new pages/<name>.md served at /<name>/) or any external link.
+
+resources:
+  - {name: Publications, url: /publication/, note: "Full list, with PDFs, code, and artifacts"}
+  - {name: Code on GitHub, url: "https://github.com/hexsa-lab", note: "Lab repositories"}
+  - {name: Joining as a PhD student, url: /recruiting/, note: "What I look for (currently at capacity)"}
+  - {name: Research advice, url: /ugrad-research/, note: "For undergrads and MS students considering research or a PhD"}
+  - {name: Teaching, url: /teaching/, note: "Courses I've taught at OSU and IIT"}
 
 current:
   - group: Faculty

@@ -35,3 +35,8 @@ body.lab .note { color: var(--muted); font-size: .9em; }
   .hexsa-hero__graphic { right: -32%; height: 105%; opacity: .7; }
   .hexsa-hero__logo img { height: 44px; }
 }
+body.lab .resources { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: .75rem 2rem; }
+body.lab .resources li { padding-left: .8rem; border-left: 2px solid var(--rule); }
+body.lab .resources li:hover { border-left-color: var(--hexsa-orange); }
+body.lab .resources a { font-weight: 600; }
+body.lab .resources .note { display: block; font-size: .88rem; }
