@@ -320,15 +320,18 @@ def build():
     env.globals.update(site=site, now=dt.date.today(), dev=DEV, skins=skins, updated=last_updated(),
                        asset=asset)
 
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    shutil.copytree(ROOT / "static", OUT)
+    # Build into a scratch folder and swap it in at the end, so a failed build
+    # (typo in a template or YAML file) never leaves a half-built site behind.
+    out = ROOT / ".public-new"
+    if out.exists():
+        shutil.rmtree(out)
+    shutil.copytree(ROOT / "static", out)
 
     urls = []
 
     def render(url, template, **ctx):
         urls.append(url)
-        dest = OUT / url.strip("/") / "index.html" if url != "/" else OUT / "index.html"
+        dest = out / url.strip("/") / "index.html" if url != "/" else out / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(env.get_template(template).render(url=url, **ctx), encoding="utf-8")
 
@@ -340,7 +343,7 @@ def build():
     render("/publication/", "pubs.html", title="Publications", pubs=pubs)
     for p in pubs:
         render(f"/publication/{p['slug']}/", "pub.html", title=p["title"], pub=p)
-        (OUT / "publication" / p["slug"] / "cite.bib").write_text(p["bibtex"], encoding="utf-8")
+        (out / "publication" / p["slug"] / "cite.bib").write_text(p["bibtex"], encoding="utf-8")
     render("/news/", "news.html", title="News", news=news)
     render("/teaching/", "teaching.html", title="Teaching", teaching=load_yaml("teaching.yaml"))
     render("/lab/", "lab.html", title="HExSA Lab", lab=load_yaml("lab.yaml"),
@@ -350,19 +353,27 @@ def build():
             continue
         render(f"/{slug}/", page.get("template", "page.html"), title=page.get("title", slug),
                page=page)
-    (OUT / "404.html").write_text(env.get_template("page.html").render(
+    (out / "404.html").write_text(env.get_template("page.html").render(
         url="/404.html", title="Not found",
         page={"title": "Page not found", "content": '<p>Try the <a href="/">home page</a>.</p>'}),
         encoding="utf-8")
 
     base = site["url"].rstrip("/")
-    (OUT / "sitemap.xml").write_text(
+    (out / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{html.escape(base + u)}</loc></url>\n" for u in sorted(urls))
         + "</urlset>\n", encoding="utf-8")
-    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n",
+    (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n",
                                     encoding="utf-8")
+
+    old = ROOT / ".public-old"
+    if old.exists():
+        shutil.rmtree(old)
+    if OUT.exists():
+        OUT.rename(old)
+    out.rename(OUT)
+    shutil.rmtree(old, ignore_errors=True)
 
     print(f"built {len(pubs)} pubs, {len(news)} news items, {len(pages)} pages, skin '{site['skin']}' "
           f"in {time.time() - t0:.2f}s -> {OUT.relative_to(ROOT)}/")
@@ -393,11 +404,16 @@ def serve(port=8000):
     threading.Thread(target=httpd.serve_forever, daemon=True).start()
     print(f"serving http://localhost:{port}/  (Ctrl-C to stop; rebuilds on save, refresh to see)")
     last = snapshot()
+    me = ROOT / "build.py"
     try:
         while True:
             time.sleep(1)
             cur = snapshot()
             if cur != last:
+                if cur.get(me) != last.get(me):   # build.py itself changed: restart with the new code
+                    print("build.py changed; restarting server")
+                    httpd.server_close()
+                    os.execv(sys.executable, [sys.executable] + sys.argv)
                 last = cur
                 try:
                     build()

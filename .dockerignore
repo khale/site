@@ -2,3 +2,5 @@ public
 .git
 .venv
 Claude*
+.public-new
+.public-old
