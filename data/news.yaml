@@ -6,6 +6,10 @@
 #
 # Shortcut:  python3 build.py news "Paper accepted to ..."   (adds one dated today)
 
+- date: 2026-10-01
+  text: Several new members joined HExSA lab this Fall. Welcome Plabon, Ben, and Nathaniel!
+  short: "HExSA Lab welcomes several new lab members in Fall 2026!"
+
 - date: 2026-07-06
   text: Nanda's paper describing MemPower, a new modeling and analysis framework for software-directed DVFS was accepted to IEEE Cluster 2026! Congrats Nanda!
   short: "Nanda's [MemPower](/publication/velugoti-2026-mempower/) paper accepted to IEEE Cluster '26."
